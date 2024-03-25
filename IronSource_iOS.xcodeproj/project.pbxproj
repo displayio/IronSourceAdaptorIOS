@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DBBF60B72BAC626A00962F6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60B62BAC626A00962F6D /* AppDelegate.m */; };
+		DBBF60BA2BAC626A00962F6D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60B92BAC626A00962F6D /* SceneDelegate.m */; };
+		DBBF60BD2BAC626A00962F6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60BC2BAC626A00962F6D /* ViewController.m */; };
+		DBBF60C02BAC626A00962F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBF60BE2BAC626A00962F6D /* Main.storyboard */; };
+		DBBF60C22BAC626C00962F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBF60C12BAC626C00962F6D /* Assets.xcassets */; };
+		DBBF60C52BAC626C00962F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBF60C32BAC626C00962F6D /* LaunchScreen.storyboard */; };
+		DBBF60C82BAC626C00962F6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60C72BAC626C00962F6D /* main.m */; };
+		DBBF60D22BAD778600962F6D /* InterstitialAdDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60CE2BAD778600962F6D /* InterstitialAdDelegate.m */; };
+		DBBF60D32BAD778600962F6D /* BannerAdDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60D12BAD778600962F6D /* BannerAdDelegate.m */; };
+		DBBF60D72BAD7B8000962F6D /* ISDIOCustomAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60D62BAD7B8000962F6D /* ISDIOCustomAdapter.m */; };
+		DBBF60DA2BAD7BA500962F6D /* ISDIOCustomInterstitial.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60D92BAD7BA500962F6D /* ISDIOCustomInterstitial.m */; };
+		DBBF60DD2BAD7BBD00962F6D /* ISDIOCustomBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60DC2BAD7BBD00962F6D /* ISDIOCustomBanner.m */; };
+		DBBF60E02BADB19B00962F6D /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60DF2BADB19B00962F6D /* FeedViewController.m */; };
+		E5A64EEB5168FB5457A4C3AE /* Pods_IronSource_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB0A4D980420ACA33C2E42D /* Pods_IronSource_iOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		93FC3FD529FF69BEB44C083E /* Pods-IronSource_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronSource_iOS.release.xcconfig"; path = "Target Support Files/Pods-IronSource_iOS/Pods-IronSource_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		AAB0A4D980420ACA33C2E42D /* Pods_IronSource_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IronSource_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B99E71EE09D94692C1C713BF /* Pods-IronSource_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronSource_iOS.debug.xcconfig"; path = "Target Support Files/Pods-IronSource_iOS/Pods-IronSource_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		DBBF60B22BAC626A00962F6D /* IronSource_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IronSource_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBBF60B52BAC626A00962F6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DBBF60B62BAC626A00962F6D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DBBF60B82BAC626A00962F6D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		DBBF60B92BAC626A00962F6D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		DBBF60BB2BAC626A00962F6D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DBBF60BC2BAC626A00962F6D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DBBF60BF2BAC626A00962F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBBF60C12BAC626C00962F6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBBF60C42BAC626C00962F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBBF60C62BAC626C00962F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBBF60C72BAC626C00962F6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBBF60CE2BAD778600962F6D /* InterstitialAdDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialAdDelegate.m; sourceTree = "<group>"; };
+		DBBF60CF2BAD778600962F6D /* InterstitialAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialAdDelegate.h; sourceTree = "<group>"; };
+		DBBF60D02BAD778600962F6D /* BannerAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerAdDelegate.h; sourceTree = "<group>"; };
+		DBBF60D12BAD778600962F6D /* BannerAdDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerAdDelegate.m; sourceTree = "<group>"; };
+		DBBF60D52BAD7B8000962F6D /* ISDIOCustomAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISDIOCustomAdapter.h; sourceTree = "<group>"; };
+		DBBF60D62BAD7B8000962F6D /* ISDIOCustomAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISDIOCustomAdapter.m; sourceTree = "<group>"; };
+		DBBF60D82BAD7BA500962F6D /* ISDIOCustomInterstitial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISDIOCustomInterstitial.h; sourceTree = "<group>"; };
+		DBBF60D92BAD7BA500962F6D /* ISDIOCustomInterstitial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISDIOCustomInterstitial.m; sourceTree = "<group>"; };
+		DBBF60DB2BAD7BBD00962F6D /* ISDIOCustomBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISDIOCustomBanner.h; sourceTree = "<group>"; };
+		DBBF60DC2BAD7BBD00962F6D /* ISDIOCustomBanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISDIOCustomBanner.m; sourceTree = "<group>"; };
+		DBBF60DE2BADB19B00962F6D /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		DBBF60DF2BADB19B00962F6D /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBBF60AF2BAC626A00962F6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5A64EEB5168FB5457A4C3AE /* Pods_IronSource_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66582F764638A4F5EDD9DB36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAB0A4D980420ACA33C2E42D /* Pods_IronSource_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BCC9612BBE4445953BB4586 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B99E71EE09D94692C1C713BF /* Pods-IronSource_iOS.debug.xcconfig */,
+				93FC3FD529FF69BEB44C083E /* Pods-IronSource_iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DBBF60A92BAC626A00962F6D = {
+			isa = PBXGroup;
+			children = (
+				DBBF60D42BAD7B3200962F6D /* DDIOAdapterIronSource */,
+				DBBF60B42BAC626A00962F6D /* IronSource_iOS */,
+				DBBF60B32BAC626A00962F6D /* Products */,
+				9BCC9612BBE4445953BB4586 /* Pods */,
+				66582F764638A4F5EDD9DB36 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DBBF60B32BAC626A00962F6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBBF60B22BAC626A00962F6D /* IronSource_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBBF60B42BAC626A00962F6D /* IronSource_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DBBF60B52BAC626A00962F6D /* AppDelegate.h */,
+				DBBF60B62BAC626A00962F6D /* AppDelegate.m */,
+				DBBF60B82BAC626A00962F6D /* SceneDelegate.h */,
+				DBBF60B92BAC626A00962F6D /* SceneDelegate.m */,
+				DBBF60BB2BAC626A00962F6D /* ViewController.h */,
+				DBBF60BC2BAC626A00962F6D /* ViewController.m */,
+				DBBF60DE2BADB19B00962F6D /* FeedViewController.h */,
+				DBBF60DF2BADB19B00962F6D /* FeedViewController.m */,
+				DBBF60D02BAD778600962F6D /* BannerAdDelegate.h */,
+				DBBF60D12BAD778600962F6D /* BannerAdDelegate.m */,
+				DBBF60CF2BAD778600962F6D /* InterstitialAdDelegate.h */,
+				DBBF60CE2BAD778600962F6D /* InterstitialAdDelegate.m */,
+				DBBF60BE2BAC626A00962F6D /* Main.storyboard */,
+				DBBF60C12BAC626C00962F6D /* Assets.xcassets */,
+				DBBF60C32BAC626C00962F6D /* LaunchScreen.storyboard */,
+				DBBF60C62BAC626C00962F6D /* Info.plist */,
+				DBBF60C72BAC626C00962F6D /* main.m */,
+			);
+			path = IronSource_iOS;
+			sourceTree = "<group>";
+		};
+		DBBF60D42BAD7B3200962F6D /* DDIOAdapterIronSource */ = {
+			isa = PBXGroup;
+			children = (
+				DBBF60D52BAD7B8000962F6D /* ISDIOCustomAdapter.h */,
+				DBBF60D62BAD7B8000962F6D /* ISDIOCustomAdapter.m */,
+				DBBF60D82BAD7BA500962F6D /* ISDIOCustomInterstitial.h */,
+				DBBF60D92BAD7BA500962F6D /* ISDIOCustomInterstitial.m */,
+				DBBF60DB2BAD7BBD00962F6D /* ISDIOCustomBanner.h */,
+				DBBF60DC2BAD7BBD00962F6D /* ISDIOCustomBanner.m */,
+			);
+			path = DDIOAdapterIronSource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBBF60B12BAC626A00962F6D /* IronSource_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBBF60CB2BAC626C00962F6D /* Build configuration list for PBXNativeTarget "IronSource_iOS" */;
+			buildPhases = (
+				4B7764A992B18F01DE649F18 /* [CP] Check Pods Manifest.lock */,
+				DBBF60AE2BAC626A00962F6D /* Sources */,
+				DBBF60AF2BAC626A00962F6D /* Frameworks */,
+				DBBF60B02BAC626A00962F6D /* Resources */,
+				9BBE0770B4B18B815C2671C6 /* [CP] Embed Pods Frameworks */,
+				80BFEFBD59AE09C972760BCD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IronSource_iOS;
+			productName = IronSource_iOS;
+			productReference = DBBF60B22BAC626A00962F6D /* IronSource_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBBF60AA2BAC626A00962F6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					DBBF60B12BAC626A00962F6D = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = DBBF60AD2BAC626A00962F6D /* Build configuration list for PBXProject "IronSource_iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBBF60A92BAC626A00962F6D;
+			productRefGroup = DBBF60B32BAC626A00962F6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBBF60B12BAC626A00962F6D /* IronSource_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBBF60B02BAC626A00962F6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBBF60C52BAC626C00962F6D /* LaunchScreen.storyboard in Resources */,
+				DBBF60C22BAC626C00962F6D /* Assets.xcassets in Resources */,
+				DBBF60C02BAC626A00962F6D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B7764A992B18F01DE649F18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IronSource_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80BFEFBD59AE09C972760BCD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IronSource_iOS/Pods-IronSource_iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IronSource_iOS/Pods-IronSource_iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IronSource_iOS/Pods-IronSource_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BBE0770B4B18B815C2671C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IronSource_iOS/Pods-IronSource_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IronSource_iOS/Pods-IronSource_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IronSource_iOS/Pods-IronSource_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBBF60AE2BAC626A00962F6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBBF60D32BAD778600962F6D /* BannerAdDelegate.m in Sources */,
+				DBBF60BD2BAC626A00962F6D /* ViewController.m in Sources */,
+				DBBF60D22BAD778600962F6D /* InterstitialAdDelegate.m in Sources */,
+				DBBF60DA2BAD7BA500962F6D /* ISDIOCustomInterstitial.m in Sources */,
+				DBBF60DD2BAD7BBD00962F6D /* ISDIOCustomBanner.m in Sources */,
+				DBBF60B72BAC626A00962F6D /* AppDelegate.m in Sources */,
+				DBBF60E02BADB19B00962F6D /* FeedViewController.m in Sources */,
+				DBBF60C82BAC626C00962F6D /* main.m in Sources */,
+				DBBF60BA2BAC626A00962F6D /* SceneDelegate.m in Sources */,
+				DBBF60D72BAD7B8000962F6D /* ISDIOCustomAdapter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DBBF60BE2BAC626A00962F6D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBBF60BF2BAC626A00962F6D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DBBF60C32BAC626C00962F6D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBBF60C42BAC626C00962F6D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBBF60C92BAC626C00962F6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DBBF60CA2BAC626C00962F6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBBF60CC2BAC626C00962F6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B99E71EE09D94692C1C713BF /* Pods-IronSource_iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 648K5S3J6U;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IronSource_iOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DisplayIO.IronSource-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBBF60CD2BAC626C00962F6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93FC3FD529FF69BEB44C083E /* Pods-IronSource_iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 648K5S3J6U;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IronSource_iOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DisplayIO.IronSource-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBBF60AD2BAC626A00962F6D /* Build configuration list for PBXProject "IronSource_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBBF60C92BAC626C00962F6D /* Debug */,
+				DBBF60CA2BAC626C00962F6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBBF60CB2BAC626C00962F6D /* Build configuration list for PBXNativeTarget "IronSource_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBBF60CC2BAC626C00962F6D /* Debug */,
+				DBBF60CD2BAC626C00962F6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBBF60AA2BAC626A00962F6D /* Project object */;
+}

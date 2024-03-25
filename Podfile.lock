@@ -1,0 +1,20 @@
+PODS:
+  - DIOSDK (4.0.0)
+  - IronSourceSDK (7.9.1.0)
+
+DEPENDENCIES:
+  - DIOSDK (= 4.0.0)
+  - IronSourceSDK (= 7.9.1.0)
+
+SPEC REPOS:
+  trunk:
+    - DIOSDK
+    - IronSourceSDK
+
+SPEC CHECKSUMS:
+  DIOSDK: 5d0c09cd367bcc8bd37482cdd33abb8869051024
+  IronSourceSDK: 4c3c24265e83ca1e4e8fdc5a499d9a5772b5040c
+
+PODFILE CHECKSUM: 569988bff8f96a77b52a4805b99253a3e9a68aed
+
+COCOAPODS: 1.15.2
