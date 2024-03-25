@@ -22,7 +22,7 @@ BOOL isClicked;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(close:)];
-
+    
     self.navigationController.navigationBar.translucent = NO;
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell1"];
@@ -32,19 +32,12 @@ BOOL isClicked;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-  [super viewDidAppear:animated];
+    [super viewDidAppear:animated];
 }
 
 - (void)createInlineAd {
     [IronSource setLevelPlayBannerDelegate:self];
     [IronSource loadBannerWithViewController:self size:ISBannerSize_RECTANGLE];
-//    ISBannerSize *bannerSize = ISBannerSize_RECTANGLE; // the banner size you choose will be the default value for non supporting banner adaptive networks
-//    bannerSize.adaptive = YES;
-//    CGFloat width = 300; // set width to your desired size
-//    CGFloat adaptiveHeight = [ISBannerSize getMaximalAdaptiveHeightWithWidth:width];
-//    ISContainerParams *containerParams = [[ISContainerParams alloc] initWithWidth:width height:adaptiveHeight];
-//    [bannerSize setContainerParams:containerParams];
-//    [IronSource loadBannerWithViewController:self size:bannerSize];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -71,15 +64,22 @@ BOOL isClicked;
     if (indexPath.row == 25 && self.adView) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell1" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+        
         [cell.contentView addSubview:self.adView];
         self.adView.translatesAutoresizingMaskIntoConstraints = NO;
-
-        [cell.contentView.leadingAnchor constraintEqualToAnchor:self.adView.leadingAnchor].active = YES;
-        [cell.contentView.trailingAnchor constraintEqualToAnchor:self.adView.trailingAnchor].active = YES;
+        if ([self.adUnitType isEqual:@"IF"]) {
+            self.adView.frame = CGRectMake(0, 0, 300, 250);
+            [cell.contentView.centerXAnchor constraintEqualToAnchor:self.adView.centerXAnchor].active = YES;
+            [self.adView.widthAnchor constraintEqualToConstant:300].active = YES;
+            [self.adView.heightAnchor constraintEqualToConstant:250].active = YES;
+            } else {
+                [cell.contentView.leadingAnchor constraintEqualToAnchor:self.adView.leadingAnchor].active = YES;
+                [cell.contentView.trailingAnchor constraintEqualToAnchor:self.adView.trailingAnchor].active = YES;
+            }
+        
         [cell.contentView.topAnchor constraintEqualToAnchor:self.adView.topAnchor].active = YES;
         [cell.contentView.bottomAnchor constraintEqualToAnchor:self.adView.bottomAnchor].active = YES;
-
+        
         return cell;
     }
     

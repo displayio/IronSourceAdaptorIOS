@@ -64,6 +64,7 @@ DIOAd *dioInterstitialAd;
                 if (dioInterstitialAd.impressed) {
                     [delegate adDidFailToShowWithErrorCode:ISAdapterErrorInternal errorMessage:@"Failed to show ad"];
                 }
+                dioInterstitialAd = nil;
                 break;
             }
             case DIOAdEventOnClicked:{
@@ -76,6 +77,7 @@ DIOAd *dioInterstitialAd;
                 if ([dioInterstitialAd isKindOfClass:DIOInterstitialVast.class]) {
                     [delegate adDidEnd];
                 }
+                dioInterstitialAd = nil;
                 break;
             }
                 
