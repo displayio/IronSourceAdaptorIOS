@@ -98,6 +98,10 @@ BOOL isClicked;
 }
 
 - (void)close:(id)sender {
+    if (self.adView != nil) {
+        [IronSource destroyBanner:self.adView];
+        self.adView = nil;
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

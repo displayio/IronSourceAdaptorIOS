@@ -58,9 +58,7 @@
     if (self.bannerView != nil) {
         [IronSource destroyBanner:self.bannerView];
         [self.bannerView removeFromSuperview];
-        self.bannerView = nil;
     }
-    self.loadBannerMrect.enabled = NO;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [IronSource loadBannerWithViewController:self size:ISBannerSize_RECTANGLE];
     });
@@ -119,7 +117,6 @@
 
 - (void)bannerLoaded:(ISBannerView *)bannerView {
     self.bannerView = bannerView;
-    self.loadBannerMrect.enabled = NO;
     self.showBannerMrect.enabled = YES;
 }
 

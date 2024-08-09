@@ -43,6 +43,8 @@ typedef NS_ENUM(NSInteger, DIOAdEvent) {
 @property (nonatomic) NSNumber  *ecpm;
 @property (nonatomic, strong) NSString *crid;
 @property (nonatomic, strong) NSString *cid;
+@property (nonatomic, strong) NSString *nurl;
+@property (nonatomic, strong) NSString *lurl;
 @property (nonatomic, strong)  NSArray<NSString*> *adomain;
 @property (nonatomic, strong) NSString *auctionId;
 @property (nonatomic) int impTrackingPercent;
@@ -50,9 +52,8 @@ typedef NS_ENUM(NSInteger, DIOAdEvent) {
 @property (nonatomic, weak) id<DIOAdClickDelegate> clickDelegate;
 
 @property (nonatomic, strong) void (^adEventHandler)(DIOAdEvent);
-
-@property (nonatomic) BOOL scaleWebviewToAd;
 @property (nonatomic) int dwellTime;
+@property (nonatomic) int rewarded;
 
 /**
  Shows an interstitial ad.
@@ -98,6 +99,9 @@ Use to track events for InFeed, Banner, Medium Rectangle, Interscroller and OutS
 - (void)preloadWithLoadedHandler:(void (^)(void))loadedHandler errorHandler:(void (^)(NSError*))errorHandler noFillHandler:(void (^)(void))noFillHandler;
 - (NSString*) advertiserName;
 - (NSString*) advertiserClickURL;
+- (void)updateCTAButtonText:(NSString*) text;
+- (BOOL)reportUserClick;
+- (long)adTimeToLive;
 @end
 
 NS_ASSUME_NONNULL_END
