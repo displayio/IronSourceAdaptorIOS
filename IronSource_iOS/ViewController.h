@@ -10,6 +10,7 @@
 
 // LevelPlay ad unit IDs (from the IronSource dashboard). Centralized here so every
 // screen pulls the same values. Defined in ViewController.m.
+extern NSString *const kAdUnitBanner;        // Banner (main screen)
 extern NSString *const kAdUnitInfeed;        // Infeed (MediumRectangle 300x250)
 extern NSString *const kAdUnitInterstitial;  // Interstitial
 extern NSString *const kAdUnitIS;            // Interscroller

@@ -13,6 +13,7 @@
 
 // LevelPlay ad unit IDs (from the IronSource dashboard). With IronSource 8+/9+ each ad
 // format is loaded by its own ad unit ID instead of the legacy global appKey-only load.
+NSString *const kAdUnitBanner       = @"zkiu58ar2rqjtfy4";
 NSString *const kAdUnitInfeed       = @"wvc82s3hkd6l7ydt";
 NSString *const kAdUnitInterstitial = @"28p8pfmeie46nold";
 NSString *const kAdUnitIS           = @"dzpfgce0djn5xa4k";
@@ -76,7 +77,7 @@ NSString *const kAdUnitRewarded     = @"wkp9a6krbxwthi75";
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         LPMBannerAdViewConfig *config = [[[LPMBannerAdViewConfigBuilder alloc] init]
                                          setWithAdSize:[LPMAdSize mediumRectangleSize]].build;
-        LPMBannerAdView *banner = [[LPMBannerAdView alloc] initWithAdUnitId:kAdUnitInfeed config:config];
+        LPMBannerAdView *banner = [[LPMBannerAdView alloc] initWithAdUnitId:kAdUnitBanner config:config];
         banner.frame = CGRectMake(0, 0, 300, 250);
         self.bannerDelegate.bannerView = banner;
         [banner setDelegate:self.bannerDelegate];
