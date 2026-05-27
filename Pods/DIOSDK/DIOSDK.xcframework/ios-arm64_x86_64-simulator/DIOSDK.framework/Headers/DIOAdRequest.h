@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DIOAdUnit.h"
-#import "DIOAppData.h"
+#import <DIOSDK/DIOAdUnit.h>
+#import <DIOSDK/DIOAppData.h>
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -17,7 +17,8 @@ typedef NS_ENUM(NSInteger, DIOMediationPlatform) {
     DIOMediationPlatformNone = 0,
     DIOMediationPlatformAppLovin = 1,
     DIOMediationPlatformGAM = 2,
-    DIOMediationPlatformIronSource = 3
+    DIOMediationPlatformIronSource = 3,
+    DIOMediationPlatformTopOn = 4
 };
 
 typedef NS_ENUM(NSInteger, DIOComplianceState) {
@@ -51,7 +52,7 @@ typedef NS_ENUM(NSInteger, DIOGender) {O, M, F};
 - (void)requestAdWithAdReceivedHandler:(void (^)(DIOAd*))adReceivedHandler noAdHandler:(void (^)(NSError*))noAdHandler;
 - (void)setPlacementId:(NSString *)placementId;
 - (NSMutableDictionary*)body;
-
++ (nullable NSArray<NSNumber *> *)getGppSid;
 /**
  Add ad request data to ad request. Must be set prior to call request ad.
  */
@@ -76,7 +77,8 @@ typedef NS_ENUM(NSInteger, DIOGender) {O, M, F};
 - (void)setKeywords:(NSString*)keywords;
 - (void)setBidFloor:(NSNumber*)bidFloor;
 - (void)setTmax:(NSNumber*)tmax;
-- (void)setMediationPlatform:(DIOMediationPlatform) platform;
+- (void)setMediationPlatform:(DIOMediationPlatform) platform
+    __attribute__((deprecated("No longer used; will be removed in a future release.")));
 - (void)setChildCompliant:(DIOComplianceState) complianceState;
 
 - (void)setSKAdNetListMax:(NSNumber*) skadnetlistMax;
@@ -114,6 +116,7 @@ typedef NS_ENUM(NSInteger, DIOGender) {O, M, F};
 - (void)setContentEmbeddable:(NSNumber*)embeddable;
 - (void)setContentData:(NSArray<DIOContentData*>*)contentData;
 - (void)addUserEid:(NSString*)eid source:(NSString*)source atype:(NSNumber*)atype;
+- (void)setLabel:(NSArray<NSString*>*)label;
 
 @end
 

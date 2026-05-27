@@ -6,30 +6,33 @@
 
 - (instancetype)initWithDelegate:(id<ViewControllerAdDelegate>)delegate {
     self = [super init];
-    
+
     if (self) {
         _delegate = delegate;
     }
-    
+
     return self;
 }
 
 /**
- Called after each banner ad has been successfully loaded, either a manual load or banner refresh
+ Called after a banner ad has been successfully loaded, either a manual load or banner refresh.
+ With LevelPlay the loaded view is the `LPMBannerAdView` the publisher created, so it is passed
+ back to the view controller via the weakly-held `bannerView` reference.
  @param adInfo The info of the ad.
  */
-- (void)didLoad:(ISBannerView *)bannerView withAdInfo:(ISAdInfo *)adInfo {
+- (void)didLoadAdWithAdInfo:(LPMAdInfo *)adInfo {
     NSLog(@"adInfo = %@", adInfo);
-    [self.delegate bannerLoaded: bannerView];
+    [self.delegate bannerLoaded:self.bannerView];
 }
 
 /**
  Called after a banner has attempted to load an ad but failed.
  This delegate will be sent both for manual load and refreshed banner failures.
+ @param adUnitId The ad unit id of the banner that failed to load.
  @param error The reason for the error.
  */
-- (void)didFailToLoadWithError:(NSError *)error {
-    NSLog(@"error = %@", error.localizedDescription);
+- (void)didFailToLoadAdWithAdUnitId:(NSString *)adUnitId error:(NSError *)error {
+    NSLog(@"adUnitId = %@ | error = %@", adUnitId, error.localizedDescription);
     [self.delegate bannerFailToLoad];
 }
 
@@ -37,31 +40,39 @@
  Called after a banner has been clicked.
  @param adInfo The info of the ad.
  */
-- (void)didClickWithAdInfo:(ISAdInfo *)adInfo {
+- (void)didClickAdWithAdInfo:(LPMAdInfo *)adInfo {
     NSLog(@"adInfo = %@", adInfo);
 }
 
 /**
- Called when a user was taken out of the application context.
+ Called when a banner is displayed.
  @param adInfo The info of the ad.
  */
-- (void)didLeaveApplicationWithAdInfo:(ISAdInfo *)adInfo {
+- (void)didDisplayAdWithAdInfo:(LPMAdInfo *)adInfo {
     NSLog(@"adInfo = %@", adInfo);
 }
 
 /**
- Called when a banner presented a full screen content.
+ Called when a user is taken out of the application context.
  @param adInfo The info of the ad.
  */
-- (void)didPresentScreenWithAdInfo:(ISAdInfo *)adInfo {
+- (void)didLeaveAppWithAdInfo:(LPMAdInfo *)adInfo {
     NSLog(@"adInfo = %@", adInfo);
 }
 
 /**
- Called after a full screen content has been dismissed.
+ Called when a banner presents full screen content.
  @param adInfo The info of the ad.
  */
-- (void)didDismissScreenWithAdInfo:(ISAdInfo *)adInfo {
+- (void)didExpandAdWithAdInfo:(LPMAdInfo *)adInfo {
+    NSLog(@"adInfo = %@", adInfo);
+}
+
+/**
+ Called after full screen content has been dismissed.
+ @param adInfo The info of the ad.
+ */
+- (void)didCollapseAdWithAdInfo:(LPMAdInfo *)adInfo {
     NSLog(@"adInfo = %@", adInfo);
 }
 

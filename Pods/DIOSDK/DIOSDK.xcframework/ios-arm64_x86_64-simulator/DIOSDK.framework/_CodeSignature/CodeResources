@@ -10,27 +10,35 @@
 		</data>
 		<key>Headers/DIOAd.h</key>
 		<data>
-		+RS8AGUOmRH/XOQGGKrskPZq5dk=
+		4HdYbCVmzkW6ZOPCNS9Ydd0mYm0=
 		</data>
 		<key>Headers/DIOAdRequest.h</key>
 		<data>
-		FSW0SjOAVpckliZHSlucPZJONUo=
+		C6hKu5S1Ng5d1hx9LqJ6Uuf3LIo=
 		</data>
 		<key>Headers/DIOAdUnit.h</key>
 		<data>
-		jTFtUaVEtuD/7zx0F/Fq8EfL2fc=
+		yZcF3VeeBCAKINgEpPYeZSeJe44=
 		</data>
 		<key>Headers/DIOAdUnitType.h</key>
 		<data>
-		L0sSYkzD1B+KBu5oOpfUc7euZTM=
+		xiseipbqhw5LPtPDzaJJ0zYcBco=
 		</data>
 		<key>Headers/DIOAppData.h</key>
 		<data>
 		pc/ENv24WS0Kc0TMU7Ed7QUMpcY=
 		</data>
+		<key>Headers/DIOAudioPlayer.h</key>
+		<data>
+		CKc8Jj+1ZenRNfcgVTherkAPIBo=
+		</data>
 		<key>Headers/DIOBanner.h</key>
 		<data>
-		8iudy04ytbfU4lUysKsQkoorxco=
+		IuSFC/u4hlqkWL1kIKzaySf1wqI=
+		</data>
+		<key>Headers/DIOBannerAudio.h</key>
+		<data>
+		FU+lMDmbaxWhgQOceLiqn1M8Nl0=
 		</data>
 		<key>Headers/DIOBannerHtml.h</key>
 		<data>
@@ -40,21 +48,25 @@
 		<data>
 		nbW8Q9eGNkPjIYGMc+ms8PDFH+k=
 		</data>
+		<key>Headers/DIOBannerVast.h</key>
+		<data>
+		ZifUMFq2HIAbTJngIsV3Rrv/UZc=
+		</data>
+		<key>Headers/DIOBannerVideoPlayer.h</key>
+		<data>
+		haAFfAWGGCxpZ+5JCvUvTnI0gH0=
+		</data>
 		<key>Headers/DIOBannerView.h</key>
 		<data>
-		bZh3OBYbAxL5ZbczZ0Pm4UyHQKU=
+		PYHBqkCDQn1AX/+3Sn+rKj7AGhU=
 		</data>
 		<key>Headers/DIOConsentManager.h</key>
 		<data>
 		lb7w0idOQEfjcOAFnccFqmH+lLo=
 		</data>
-		<key>Headers/DIOContainer.h</key>
-		<data>
-		eIqxl9yERidCXzWTMnsg5xmtIeA=
-		</data>
 		<key>Headers/DIOController.h</key>
 		<data>
-		Mpi3JXfBA6X+sZig4k63tOi78F0=
+		CClL3G/SJtQN2N5JxlVXW83cphU=
 		</data>
 		<key>Headers/DIOCustomWebView.h</key>
 		<data>
@@ -66,15 +78,23 @@
 		</data>
 		<key>Headers/DIOEndCard.h</key>
 		<data>
-		eYI09RCCU4m/fmAQ6epxOCIcnsM=
+		QiEnFiTdf7zfdKGee6fbPRJ7bw0=
+		</data>
+		<key>Headers/DIOFullscreenAudioCoverLayout.h</key>
+		<data>
+		t51il10v2pAuXRBv0IWkV5cWN44=
 		</data>
 		<key>Headers/DIOHtmlAd.h</key>
 		<data>
-		tpzCEFpg6aRlDN8kGt93A4Z9ATg=
+		tlrbQWeqvX+CEUbBqJvtjxQ1aY8=
 		</data>
 		<key>Headers/DIOInFeed.h</key>
 		<data>
-		wU2SGAtX4Z8Ru9ll2z4CKg64aIc=
+		NOyB+a24/sOT2ZjuLwT04mByNzQ=
+		</data>
+		<key>Headers/DIOInFeedAudio.h</key>
+		<data>
+		6ze9k/adoN75fwHc2OQklKw47M0=
 		</data>
 		<key>Headers/DIOInFeedHtml.h</key>
 		<data>
@@ -86,27 +106,35 @@
 		</data>
 		<key>Headers/DIOInFeedVast.h</key>
 		<data>
-		IKIKY1p+w7ugnG5B0u8z/ZbRFtM=
+		bKKPSXqkREFk0OlKDaG0OxFCapY=
+		</data>
+		<key>Headers/DIOInFeedVastProtocol.h</key>
+		<data>
+		Zehq3BJnZOxuLpijOfLnNlMDwtI=
 		</data>
 		<key>Headers/DIOInFeedVideoPlayer.h</key>
 		<data>
-		1le9b/Z3P6BWErzSTUiRtVyIM3Y=
+		SxfyQ3xRnCuITU6r/A3b9Pl17T8=
 		</data>
 		<key>Headers/DIOInFeedView.h</key>
 		<data>
-		tjlQWiZONuHZJjYOVfWxJWVGWww=
+		yKLng1xz9+ATVZjveqHbcRMGF9E=
+		</data>
+		<key>Headers/DIOInFlowAudio.h</key>
+		<data>
+		2BDXoyEfcux52iBYikjfv1J0s5o=
+		</data>
+		<key>Headers/DIOInFlowAudioPlacement.h</key>
+		<data>
+		97m3O6D6WfHXc6Gg341deE4Mphk=
 		</data>
 		<key>Headers/DIOInRing.h</key>
 		<data>
-		jyYM9rwoeKNLS3f++UqNmzoVn20=
-		</data>
-		<key>Headers/DIOInRingAudioPlayer.h</key>
-		<data>
-		as7sn61ikX+3NVL+UhT4Dwn3hkE=
+		IkR9K5tJLYuOy2L0jo8RVOPxT/Q=
 		</data>
 		<key>Headers/DIOInRingPlacement.h</key>
 		<data>
-		vr2F07sTwY3yyeDLdyVVFuhw7xc=
+		akt2e8r4c6FRKvCbBzFksvd6st8=
 		</data>
 		<key>Headers/DIOInlinePlacement.h</key>
 		<data>
@@ -114,7 +142,11 @@
 		</data>
 		<key>Headers/DIOInterscroller.h</key>
 		<data>
-		GyMbLPb/Wq9ZfR2822ldMekSh+M=
+		1ax85yEGr3QjjmlHOFPvIxd0Cvg=
+		</data>
+		<key>Headers/DIOInterscrollerAudio.h</key>
+		<data>
+		tENAZ3NvlGeMIYqx8gnK2zUXaK4=
 		</data>
 		<key>Headers/DIOInterscrollerHtml.h</key>
 		<data>
@@ -134,7 +166,7 @@
 		</data>
 		<key>Headers/DIOInterscrollerVast.h</key>
 		<data>
-		Vk/SPWh0/S9dRJnXrU+KcDj1B3k=
+		kfJ1W8sobpeOeHKFQfakKnr271U=
 		</data>
 		<key>Headers/DIOInterscrollerVastMockPlacement.h</key>
 		<data>
@@ -142,19 +174,23 @@
 		</data>
 		<key>Headers/DIOInterscrollerVideoPlayer.h</key>
 		<data>
-		0h1Zp37WIH/t0kSNJ4Um8Jh/rC4=
+		s4qkVJ/3TZeO4j4SBiSOQcopMZ4=
 		</data>
 		<key>Headers/DIOInterscrollerView.h</key>
 		<data>
-		+hvzKubM9cYn+V7BlS0HzMZKgok=
+		koa2lTUJtk3J3VZtGX8Sw/c3XKY=
 		</data>
 		<key>Headers/DIOInterstitial.h</key>
 		<data>
-		SmsIo6GNkqwxmRjZGnSVZ1UER0w=
+		AYE78zlfcUQiGthMeClZ7f2NsaY=
+		</data>
+		<key>Headers/DIOInterstitialAudio.h</key>
+		<data>
+		IblXGQgYFyw2mAV5fRQUP2gVpeA=
 		</data>
 		<key>Headers/DIOInterstitialHtml.h</key>
 		<data>
-		wfTf5R+/hdY/SDT0voW9ly+3DFo=
+		iL/VZqC2SCCgb4cjRcN70qxUnTg=
 		</data>
 		<key>Headers/DIOInterstitialPlacement.h</key>
 		<data>
@@ -162,7 +198,7 @@
 		</data>
 		<key>Headers/DIOInterstitialVast.h</key>
 		<data>
-		pCNlXcxZoeb0PB6X4+OCv+hvbV8=
+		zQoR21EPNvZ4BU7gCejV1lojfAQ=
 		</data>
 		<key>Headers/DIOInterstitialVideoPlayer.h</key>
 		<data>
@@ -184,29 +220,69 @@
 		<data>
 		0wR4etgrk3CFmc86D0NOZDRpycA=
 		</data>
+		<key>Headers/DIOMediaAd.h</key>
+		<data>
+		ZVw9ZQ9dH9UVB/Ff6aa7POwHI54=
+		</data>
 		<key>Headers/DIOMediaPlayer.h</key>
 		<data>
-		GNHZYs/JEaiNobUD/ePMLORrDNs=
+		7jBU8yCD70tv3bn53mxFUhTFPYY=
 		</data>
 		<key>Headers/DIOMediaPreloader.h</key>
 		<data>
 		2jnQRl82anx0YgL9fIMRwirvzrM=
 		</data>
+		<key>Headers/DIOMediatedAd.h</key>
+		<data>
+		VLXO1VWQSDk6omlHS0Xqt5QZd68=
+		</data>
+		<key>Headers/DIOMediatedAdProvider.h</key>
+		<data>
+		jkDAeIlB7bCGlFAJLdnjGCYvwO8=
+		</data>
+		<key>Headers/DIOMediatedBanner.h</key>
+		<data>
+		0gxzF4pGwpfXuEELQ57pkivnkd8=
+		</data>
+		<key>Headers/DIOMediatedInfeedHtml.h</key>
+		<data>
+		Q0jdu8mt4vcB5Y9Wm0pK7+PYukw=
+		</data>
+		<key>Headers/DIOMediatedInlineAd.h</key>
+		<data>
+		kk/GEm5PnQM6s66Ytzeej4Kiluk=
+		</data>
+		<key>Headers/DIOMediatedInterscroller.h</key>
+		<data>
+		ksrl8DRFKc+ylGeC9c2d0xAFo9A=
+		</data>
+		<key>Headers/DIOMediatedInterstitialAdPresenter.h</key>
+		<data>
+		Ff3dDHX6Y5TZULYBCuaspnpK4gw=
+		</data>
+		<key>Headers/DIOMediatedMrect.h</key>
+		<data>
+		XmZ+CGZcw8Ru77GOBAEFNSaYnsg=
+		</data>
+		<key>Headers/DIOMediatedNativeAd.h</key>
+		<data>
+		c67jsgd+KXAT5cSGZgSJRYJh5xo=
+		</data>
 		<key>Headers/DIOMediumRectangle.h</key>
 		<data>
-		bld08yGCnbKHqND51/MeJqLdqao=
+		AJQKDXJbDnNUuwTI0k60I1TWRBM=
 		</data>
 		<key>Headers/DIOMediumRectangleHtml.h</key>
 		<data>
-		OcXADmwGc0eB0mxBemXlPUHsmX8=
+		1vTVzQRoreEhQyNt9LkyZFrLs2o=
 		</data>
 		<key>Headers/DIOMediumRectanglePlacement.h</key>
 		<data>
-		d6dgSXeJEcZAVnHOZTVY7c5fvWc=
+		VCLkXEafvdchhxswRG7vECunV4o=
 		</data>
 		<key>Headers/DIOMediumRectangleView.h</key>
 		<data>
-		o+g8yGJWCV9BxCyIvWZvtHpT3SY=
+		I8dh2eTNHIEQIoSX0+HnJRn8riM=
 		</data>
 		<key>Headers/DIOMessageLogger.h</key>
 		<data>
@@ -220,9 +296,25 @@
 		<data>
 		08w+UfmYePwbtozk+cL1pWSKvZo=
 		</data>
+		<key>Headers/DIONativeAdInterface.h</key>
+		<data>
+		GcpMKbIkFU3guHm4jEy5Oow8e0M=
+		</data>
+		<key>Headers/DIONativeMediaView.h</key>
+		<data>
+		ngmu9n6VUrCU484+2PrUtAYQJf4=
+		</data>
+		<key>Headers/DIONativePlacement.h</key>
+		<data>
+		kHuZAd3iBv00Qagm+mSiAg/OEJk=
+		</data>
+		<key>Headers/DIONativePlacementAssetParams.h</key>
+		<data>
+		1vPjrY04PID13s92E//FNkWStXE=
+		</data>
 		<key>Headers/DIOOMAdSession.h</key>
 		<data>
-		ThxtvmzfJu3BVU//BItDbvFkXv0=
+		KC/qfMZ12xCsbS7kfIw1XdGEvEs=
 		</data>
 		<key>Headers/DIOOMController.h</key>
 		<data>
@@ -234,47 +326,95 @@
 		</data>
 		<key>Headers/DIOPlacement.h</key>
 		<data>
-		mxVFWrwr8lIxfmeePjdlrcKrQPU=
+		owFlz61Iemyn0xOpfBchxjdB//c=
 		</data>
 		<key>Headers/DIOPlayerView.h</key>
 		<data>
 		CXI3cWHkgmo5Z9dw30kd05WTpmE=
 		</data>
+		<key>Headers/DIOPureAudioPlayer.h</key>
+		<data>
+		xHCt148oUpR7gfGjo+v9ZqfXCXY=
+		</data>
 		<key>Headers/DIORewardedVideo.h</key>
 		<data>
-		7QgLV8wGtn9IZxSHU8MAuX94x5A=
+		ecDpC4r+vkOTocmfn+hHlIkli2Q=
 		</data>
 		<key>Headers/DIORewardedVideoPlacement.h</key>
 		<data>
-		uB7U9gclG7yXGZb9EYR0PEGdphY=
+		uCwHrOicYJ+PZ9vLIFMfD9G5zGI=
+		</data>
+		<key>Headers/DIOSDK-Swift.h</key>
+		<data>
+		2/b8/BKetX7WcI6i98ODsw4NOI8=
 		</data>
 		<key>Headers/DIOSDK.h</key>
 		<data>
-		PO68LCezGebZZuX5SZ/j6RNjyVE=
+		6jqx+NW8kc2wSUrK0j8L82MGncQ=
 		</data>
 		<key>Headers/DIOServiceClient.h</key>
 		<data>
-		V/ngH1LQJT9dLaM4rm7JxVQ/sv4=
+		TA/oQFkBK2m32xT4qbESKKeoxdU=
 		</data>
-		<key>Headers/DIOVideoAd.h</key>
+		<key>Headers/DIOViewabilityMeasurer.h</key>
 		<data>
-		A6XF1Ql8dhTeKXF+k3iSoPeZBOQ=
+		AMJCvOWmQFtbdEFzrqh+yi5x+n8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		888dZIV7/A5E3aiNXsGLoHQK0Xg=
+		4hIuz0YOGaqo+lcTb6tlmt4tuIQ=
+		</data>
+		<key>Modules/DIOSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		wqH4QNhnb7Y8mouMz/vy5J/j+4c=
+		</data>
+		<key>Modules/DIOSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		8MI0FnZkafQphI0EklerVe+MwAY=
+		</data>
+		<key>Modules/DIOSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		YjSw8ByQ/u/f1W1mWrhpyiKm18Q=
+		</data>
+		<key>Modules/DIOSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		8MI0FnZkafQphI0EklerVe+MwAY=
+		</data>
+		<key>Modules/DIOSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		Yb2ZaKVlrffVVUvyax6BNKdCeaI=
+		</data>
+		<key>Modules/DIOSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		wqH4QNhnb7Y8mouMz/vy5J/j+4c=
+		</data>
+		<key>Modules/DIOSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		+BzLFweZZTRyGEeGviKf+NT4HA8=
+		</data>
+		<key>Modules/DIOSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		pX3x5wUGacunPDq+SE+DmyT9sYk=
+		</data>
+		<key>Modules/DIOSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		+BzLFweZZTRyGEeGviKf+NT4HA8=
+		</data>
+		<key>Modules/DIOSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		u9vXNi5oMVJVbaOsIpzJTGd+d4Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		IreLp8IfVPClfZ+MWX4/7UtNF5g=
+		aMfWdquecS6C36EU33JlPmk8FNE=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		ONd9jlsjq4Ky/Qjw2r6CoMuEjsc=
+		PR2QZRJQm3BjKVB9FBZ2oRkSalw=
 		</data>
-		<key>gradient@2x.png</key>
+		<key>ic_arrow.png</key>
 		<data>
-		6cu1JxkPSJUCUJNkpewn4z1507o=
+		DvZLKMeCLgomjXT6TPiejopTukA=
 		</data>
 		<key>mask@2x.png</key>
 		<data>
@@ -286,7 +426,7 @@
 		</data>
 		<key>omsdk-v1.js</key>
 		<data>
-		HLTF5+1HU2hoYquUpf0GG8R+ndA=
+		u9/mPrmzbXwip3DbLBGayyL/ONw=
 		</data>
 		<key>placing_call.mp3</key>
 		<data>
@@ -318,28 +458,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v+OqVrh9Hybvfw9blZTUtCwmgc4Xsb8qaSVVFSB8huU=
+			tUPjTPIin2EAHOpQoGeZu9C200FaAsHjhQpPwbxZdz4=
 			</data>
 		</dict>
 		<key>Headers/DIOAdRequest.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DjLCm/GAJV+VysF1JkHXGtJ8BBgM6p8H+umvuisUdh8=
+			jXshog7W/oOtF8/3hXrhoymmOEGXhW15tGt3y5OJDaY=
 			</data>
 		</dict>
 		<key>Headers/DIOAdUnit.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AzIp6rka1zug29Zge6St9Xb8Zy/iCpyYJNsolsKRIO0=
+			/i4qqXFPcdFFv1CRYztw7KhlBLUdBbTuKvR5+EyFQ4Y=
 			</data>
 		</dict>
 		<key>Headers/DIOAdUnitType.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RtGXhrvZGpdsv+mWppvhOUYHL8ykfln/mRzzU3Lbk6c=
+			E9lHeNg/d4ZI1mW1gYwogg/HzKUmxLvMmjwxPRWicKU=
 			</data>
 		</dict>
 		<key>Headers/DIOAppData.h</key>
@@ -349,11 +489,25 @@
 			7Utlb8+4ldC4mEjaNZJ2cr1u0XQd9lusuDskSm3c5Ns=
 			</data>
 		</dict>
+		<key>Headers/DIOAudioPlayer.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			deZk0s3r4JgKwvORjn3qveVmIjEXf4/Pj6lbE+k3Mag=
+			</data>
+		</dict>
 		<key>Headers/DIOBanner.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aTMjiPKmck+aAUWC+EjggV3e8uhsh9zVkbj0JZiPKWc=
+			zVX4sH9JiZHCXvnX1OGJmj6GAqihIuv0moJezPn0FCs=
+			</data>
+		</dict>
+		<key>Headers/DIOBannerAudio.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pxNcfz3xwS4V58UdGRxQsc8wPb/ozTtRVRSxOkREqPw=
 			</data>
 		</dict>
 		<key>Headers/DIOBannerHtml.h</key>
@@ -370,11 +524,25 @@
 			aDJd114wJ3AP8hoEvgpgLMfm7a0QEVOTdJ0OUQfBKv8=
 			</data>
 		</dict>
+		<key>Headers/DIOBannerVast.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TX+VHKgCJH0vtKhKXY/HYUGwUMtojG4Orhxoyw72DNA=
+			</data>
+		</dict>
+		<key>Headers/DIOBannerVideoPlayer.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zR6Hr4ts/wQt/oRTXz5eraOxhxjLZIW8laiVCDr2fqw=
+			</data>
+		</dict>
 		<key>Headers/DIOBannerView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dQsckuoDUZ60sk+0j6CW3cDG1cIMALU8zefroCbGDdw=
+			Uo45PZ3up1I/U9lTijmrgcIlP0+dDT2my0VwCM1KRR4=
 			</data>
 		</dict>
 		<key>Headers/DIOConsentManager.h</key>
@@ -384,18 +552,11 @@
 			nS/AMk+4krguSsVkEgn1+s0kkpNj2Zh5oBsb/hCc56Y=
 			</data>
 		</dict>
-		<key>Headers/DIOContainer.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7LnfMGekXG0s2X5T7WidJTo80+QNxuGBpY7Gff41vLk=
-			</data>
-		</dict>
 		<key>Headers/DIOController.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2lPi2jyATIY7p4bjT/6Q5ZxuFM34SaQJ7MYYWjnsOM4=
+			3eiSXDxpDo69JuDyexEWB1jhPg7pK/Zgmc3wqbCoqZU=
 			</data>
 		</dict>
 		<key>Headers/DIOCustomWebView.h</key>
@@ -416,21 +577,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3KMhX8aZsw9/7X45g5+Q/rKsNS5tSaGtjVdRzaGI/tk=
+			S3yhFrUBPoLkc0pedhVyGYv+83c5k105garcWbfXXf0=
+			</data>
+		</dict>
+		<key>Headers/DIOFullscreenAudioCoverLayout.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			rfun+5JPkyDoPZxRwML5CE8wpGvd0EcgVa5FS10t/Xg=
 			</data>
 		</dict>
 		<key>Headers/DIOHtmlAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RYyHDklRlBpejXoqufosGabp6KHlI2fEks4YzvzuWQE=
+			WgTL90TrrJPp1H+KII05GJiV/3CG3/AVSJhn2q2jIs0=
 			</data>
 		</dict>
 		<key>Headers/DIOInFeed.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SFVEVqA59Et9gbMIG26jN1M1tu1n2+cYfDtA96KyyBY=
+			+YkFc+PKUQdubveQ5IE11ufxAu8T1J2dbkAlev/p9QQ=
+			</data>
+		</dict>
+		<key>Headers/DIOInFeedAudio.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jsIB6+/iVJoH5JqA06Dq+0bVHqsmi5vBUdZpqUwcP+o=
 			</data>
 		</dict>
 		<key>Headers/DIOInFeedHtml.h</key>
@@ -451,42 +626,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7itDxwnIA9P5SEm3MKu3k2I5wYc5GNC/cNqm40jB1Xw=
+			bOKiYM56VB0vf59EW6J/1+hJmceW0NE8sehXdCQoLuQ=
+			</data>
+		</dict>
+		<key>Headers/DIOInFeedVastProtocol.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			q8KAa4R6Np/+PFDeKS47/Qk/VuhSsw71K6y8ms92UJw=
 			</data>
 		</dict>
 		<key>Headers/DIOInFeedVideoPlayer.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pT6yhwyhgg/reT4+u6RxgTnh1iUiFGMQVbvkjPpQsOk=
+			CNiP9oYjg2ouOvbBUUXMmvAqT+WMDS+i7lGAnVMLNtM=
 			</data>
 		</dict>
 		<key>Headers/DIOInFeedView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DKghfo+90Dvc85HQecMBqNPyrOWV7Hk6XImx/SdfYpA=
+			eB/OquqsyMk9lO29HcbCAJj2l9s7Xpvuxg0WPGfso74=
+			</data>
+		</dict>
+		<key>Headers/DIOInFlowAudio.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NSQPtCPQ5ndC0g7VuxBYr96sAcMRZVnjJ8+ETSR/rNU=
+			</data>
+		</dict>
+		<key>Headers/DIOInFlowAudioPlacement.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LsE05wz/Y4VEpwGk4jNjBmu+kqBwCGFvL6xobyccnHw=
 			</data>
 		</dict>
 		<key>Headers/DIOInRing.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7uUbvZH2qHoxvvCSRR8MoDWI7sWBgIhGgc1zsA6Fn1Y=
-			</data>
-		</dict>
-		<key>Headers/DIOInRingAudioPlayer.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			r7o/7pSkLc+rM/7KioDy5kiLgLXjIlB9HWxfc0JCQ44=
+			Pswt1TCME1FTlN8KoGbPhLFKo/Gvh5O+w2rmwk8OymQ=
 			</data>
 		</dict>
 		<key>Headers/DIOInRingPlacement.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1LXHUrLhoNAKYeLX04rgTI4lfJIf1fIsG2//2ctRcvk=
+			Gb5iHqtUuPjHfvRpg7xUZs226aPvusc6EWIRO0RhMws=
 			</data>
 		</dict>
 		<key>Headers/DIOInlinePlacement.h</key>
@@ -500,7 +689,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L8Odr3Jr99smmF5A52+f5lkQ7D+9U+acYJOtP4eUwYc=
+			PrgozRAYK25wyYG7HUuPsGFb509sjtqj45hlyIRrsWE=
+			</data>
+		</dict>
+		<key>Headers/DIOInterscrollerAudio.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			a2M/F6mrbzCqFf/yNcBAvtDW9XpqiCm0OnCg+zESlHE=
 			</data>
 		</dict>
 		<key>Headers/DIOInterscrollerHtml.h</key>
@@ -535,7 +731,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/vOdxCtcwhGUWfU7dYQB/ipzdal0eV7mqY8+8MQn/os=
+			EEFGseLWsGllrygrwLURPXTBbfa9K2l8HcP7aSVwAFY=
 			</data>
 		</dict>
 		<key>Headers/DIOInterscrollerVastMockPlacement.h</key>
@@ -549,28 +745,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tj4JumDzEpkE+b3aujC8koX+fVYg0hE4CTytplsUSWk=
+			Io08m/LWgoGjmQ29DMNiTiNJehKR4uABQrhL7VKZfp8=
 			</data>
 		</dict>
 		<key>Headers/DIOInterscrollerView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JtaJddz2iY/Ql3c4tjzw3hkmTd+HBoKxBuO+ZBflf4Y=
+			kxr50iXWz8OOe8Q7zE8iRUienjMX0pvZxNF0w2WikW0=
 			</data>
 		</dict>
 		<key>Headers/DIOInterstitial.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			byqHU5mcn0KB9iebPeceUD8wfFoNNZZOcZzlEsFbG74=
+			h+hx9gRrO9l9LL3ty6MTqYKCKs7E6ogX2zMPovmrQ2c=
+			</data>
+		</dict>
+		<key>Headers/DIOInterstitialAudio.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Um7joHca+3qbnxyzo41r3WgjNJ3Qx9ecWc2bvG/lz6U=
 			</data>
 		</dict>
 		<key>Headers/DIOInterstitialHtml.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WJAjaC9ARnqp0ndjcI1qC/WHkjZSaM42q2mczzF5i/Q=
+			eMQWaxnPAVkfMnuDGsaJpJGEEkUm5DTb7V1qE/AiK9k=
 			</data>
 		</dict>
 		<key>Headers/DIOInterstitialPlacement.h</key>
@@ -584,7 +787,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5zf1KhObecPEDpQf+UKzsvnbV8t0Gvltli68zmXn2rI=
+			65jv0GiopMrt/D7YiZd1bBAeem1VFwB2oVhGgIncZro=
 			</data>
 		</dict>
 		<key>Headers/DIOInterstitialVideoPlayer.h</key>
@@ -622,11 +825,18 @@
 			oHb//Wq5/wV4pX19vWiknA+KI4VH7EUiiEEled9I0WA=
 			</data>
 		</dict>
+		<key>Headers/DIOMediaAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qx3NxQsSA9I6d8IG7hRbOxWlXA9+NavR5M1hZbCJ9Ng=
+			</data>
+		</dict>
 		<key>Headers/DIOMediaPlayer.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2RycsY6TCaAUdOQNJ699/dgL49vUd8OpaqDOvRe7IQU=
+			cJgoTY7fICywxga5s4fehLyMioBSRfW0xyCVRySo31k=
 			</data>
 		</dict>
 		<key>Headers/DIOMediaPreloader.h</key>
@@ -636,32 +846,95 @@
 			3u8B5r6WEj3lMMa3kvFb3hvBsRrch2nCnWrS9z1GSsM=
 			</data>
 		</dict>
+		<key>Headers/DIOMediatedAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			W+/Ne0lJAkr0+U8Qd4Q7Qdei4gArZEeca1IWj/5bD1s=
+			</data>
+		</dict>
+		<key>Headers/DIOMediatedAdProvider.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ny90t5Q6i0Tt2DnQhZLa15nEoSCRpAicUmmggnAA7mk=
+			</data>
+		</dict>
+		<key>Headers/DIOMediatedBanner.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fwAd9jR+x/LxaZSqftcRnnN6kK+E23RnMDzN2NMgfA8=
+			</data>
+		</dict>
+		<key>Headers/DIOMediatedInfeedHtml.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bgZMOjX7lBLoSUOLZ66JRLKEUl/cNAf58FZp4AVwrI4=
+			</data>
+		</dict>
+		<key>Headers/DIOMediatedInlineAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fCn3TtPFPCHERIyN79vWSEsdxtMMSNxLOHTCGu3Tcbs=
+			</data>
+		</dict>
+		<key>Headers/DIOMediatedInterscroller.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xNy/dM69e1GQlnTptSqDHGTQCy6QGzqKCFQ4h50SFI4=
+			</data>
+		</dict>
+		<key>Headers/DIOMediatedInterstitialAdPresenter.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5aHya5jfqFfOI0tZ6F0WVWoaFYIC6lck0BpRPqMk6cg=
+			</data>
+		</dict>
+		<key>Headers/DIOMediatedMrect.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sshLmcRhFEWrmutDBndvNwtZuCUlQaTMwuuXEjVMRuE=
+			</data>
+		</dict>
+		<key>Headers/DIOMediatedNativeAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xBXC2NlgwGVy82sM12s+NCKAQ/u+LbK+N80VTktdUSY=
+			</data>
+		</dict>
 		<key>Headers/DIOMediumRectangle.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UnFewOHyfuT+cWbs26NBhH3/n6bTs6zQdsbAryV9YDw=
+			AZqINm6a6Ftxy6ujL5UgGTpJczvUwCy2H63d2kRVbC8=
 			</data>
 		</dict>
 		<key>Headers/DIOMediumRectangleHtml.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zI/vB32RUNL2HRD2rrBtGoK1/q3JYk0QGkvYur9b/00=
+			RWQ0Y8uop+DDepABwTuai6kPSKPtkIPygdMjqLA9hLA=
 			</data>
 		</dict>
 		<key>Headers/DIOMediumRectanglePlacement.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0NHlOMgxI4ytNTdcTqYJkyUnt6rzQwKbZH9s7gI847g=
+			IGFidyKI/ffvhyJK1t2LyIAdLCjGQoTSfQEL96WlBlk=
 			</data>
 		</dict>
 		<key>Headers/DIOMediumRectangleView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jPxCWYXJ2cklBswmUg71vzJFEErNwMcDmAgx6O4TBrk=
+			1XDIWIdyXDi9DASaYLeKSOP2U+0z/A5/tZV38F9u2LA=
 			</data>
 		</dict>
 		<key>Headers/DIOMessageLogger.h</key>
@@ -685,11 +958,39 @@
 			PeczKjnCc5aJd/Qjmmyt5qup29Zmz4joxgANERL8JhM=
 			</data>
 		</dict>
+		<key>Headers/DIONativeAdInterface.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eX78Z0zidL8OI/7pRw1QlkxMhjmsJJQGbdTZMvOh+ac=
+			</data>
+		</dict>
+		<key>Headers/DIONativeMediaView.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vAa+W/d1dXX5qaLerJ3Fx01wKkJ0/kzmwLHRUXexAgs=
+			</data>
+		</dict>
+		<key>Headers/DIONativePlacement.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1cqXyfdb9SeVamZqnl+/bAC6XBHWIyd3VeNRn5omUPo=
+			</data>
+		</dict>
+		<key>Headers/DIONativePlacementAssetParams.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			s2QKQpfUnHaxTwgNvHOPihJPThJm6xDhmebC2kyD3M4=
+			</data>
+		</dict>
 		<key>Headers/DIOOMAdSession.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			547w6NTCpXRf0wVK7Xp9qks7wGTyFl1UOrJUCC15pzg=
+			0U1qxeaey1oR3kqW7Mew9Gm2qZjJbBiP+2z07UXkPYk=
 			</data>
 		</dict>
 		<key>Headers/DIOOMController.h</key>
@@ -710,7 +1011,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			npDAgKyW4+V3W0KJStGQf4Dw5/1SZVTjOCQHyt7cXBM=
+			rCdFRqCLYfEGgFzVrHMK0306cxraLlP/bQfFZI+UAXw=
 			</data>
 		</dict>
 		<key>Headers/DIOPlayerView.h</key>
@@ -720,60 +1021,144 @@
 			SM9kF8i+txtfdPq5gjbg75lClBVCZ/U7rD5X/pmfTGE=
 			</data>
 		</dict>
+		<key>Headers/DIOPureAudioPlayer.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZxFoqTq9VVN0to/0jREBeLhOd5SMQJG4+OMrDQgywEQ=
+			</data>
+		</dict>
 		<key>Headers/DIORewardedVideo.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yCVm8b49cZTEbehuSzJSayiJmY6TN8kMh8E8DrD3W7E=
+			4OX/ibgusWMpxpGYTafRynxBmOcPt6/65dAV3nkY7ZQ=
 			</data>
 		</dict>
 		<key>Headers/DIORewardedVideoPlacement.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2Wg9axi78ckM4lbFfp/oB2uAZvTnXMQuweump4l7Ccg=
+			eutOZnz1f+b5t+jocdsTwBJS5s/lN3uLstaKLMSK5F4=
+			</data>
+		</dict>
+		<key>Headers/DIOSDK-Swift.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ieVj1AaPoPfp4sI0Mo16KtKv7IA13akfiIsewiobN+g=
 			</data>
 		</dict>
 		<key>Headers/DIOSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3WRquCoWC45qc05LXsaLzZr5l5g2kYtmKNBPfeNIHPc=
+			1gGQP1PGA86X4JdoE8lfqv6bZVyALL0nC3G6/mfi3Mo=
 			</data>
 		</dict>
 		<key>Headers/DIOServiceClient.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NDNBhkRs5L06ugTnezCsQKsqViAec715/K8Sb97dBkE=
+			8d+8hxW2eC+BV9jDvw1HSmhKY11CcnCD7kN1X/Yf+OU=
 			</data>
 		</dict>
-		<key>Headers/DIOVideoAd.h</key>
+		<key>Headers/DIOViewabilityMeasurer.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QXCTdwjRFu3fUfzaIkT5lFJd8DO5U30jqkmZ7R7YYAk=
+			23JHe6n9vXYPHClccE/YlgbyI1VRykDzxr/Vh3HWcvY=
+			</data>
+		</dict>
+		<key>Modules/DIOSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2ohIpOcXIybsIuvyIkr1bXnRkS3vk4cE7M+D2oBNP8o=
+			</data>
+		</dict>
+		<key>Modules/DIOSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			m064MYy2dfR47RTO8sq03qHPtorl24S4xXKPolhpPMc=
+			</data>
+		</dict>
+		<key>Modules/DIOSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Uc5T0IdwHG2w/5NrO5DccBlz+I0YXOlvOlJiSxnsqlw=
+			</data>
+		</dict>
+		<key>Modules/DIOSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			m064MYy2dfR47RTO8sq03qHPtorl24S4xXKPolhpPMc=
+			</data>
+		</dict>
+		<key>Modules/DIOSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0LZQG6Z5OQD2uxUQ3I5FEdFLNTVlvWP2OdEQnaAsSvA=
+			</data>
+		</dict>
+		<key>Modules/DIOSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2ohIpOcXIybsIuvyIkr1bXnRkS3vk4cE7M+D2oBNP8o=
+			</data>
+		</dict>
+		<key>Modules/DIOSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KIYAKBWZLKK4Fo5PYKIIDfYspcgwGKNmdzs/tazUkj8=
+			</data>
+		</dict>
+		<key>Modules/DIOSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1bRfDgsm3c7vSks4cGWSHm9K6REjqHjkEePWNLl/Qgs=
+			</data>
+		</dict>
+		<key>Modules/DIOSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KIYAKBWZLKK4Fo5PYKIIDfYspcgwGKNmdzs/tazUkj8=
+			</data>
+		</dict>
+		<key>Modules/DIOSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			A2ElJReDSYz/DwK72DfUa6j3O21Sreo+DlocEzBKaoY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+EZvZNJ+gkKeeRXhPgcaE6a1r5o+K5ymjqBWPQ+g6CI=
+			AOuYSgVN7f1Y5ybS+rz3BShApRSCqKcejRkOhvYiDoQ=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			keGHlMUWZyBRijDfhqw+RijSlquTFxP/o33Hr55yssQ=
+			Gq3VMwn9wVsTy9NU2D4jsCm3VuSQV97eaDLFO2t9IKQ=
 			</data>
 		</dict>
-		<key>gradient@2x.png</key>
+		<key>ic_arrow.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T2taIMx/v58/3Nsf+p7O2nlTTHFQtj5L4nJMOQDEVnc=
+			+/A7N3L1kV6WR1vM8k1cj2Wg69aWg208i6do6kPCiHE=
 			</data>
 		</dict>
 		<key>mask@2x.png</key>
@@ -794,7 +1179,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			En6uGQJYYOILrfT3vX3mLczuXMX2T0ywCOAksbzBdO4=
+			hFBEs2p2A14mQ+YAqpD2sSrrqhKC5ZxTD7vD9SKRvEU=
 			</data>
 		</dict>
 		<key>placing_call.mp3</key>

@@ -84,6 +84,7 @@ DIOAd *dioInlineAd;
                 [delegate adDidDismissScreen];
                 break;
             }
+            case DIOAdEventOnAdStarted:
             case DIOAdEventOnAdCompleted:
             case DIOAdEventOnSwipedOut:
             case DIOAdEventOnSnapped:

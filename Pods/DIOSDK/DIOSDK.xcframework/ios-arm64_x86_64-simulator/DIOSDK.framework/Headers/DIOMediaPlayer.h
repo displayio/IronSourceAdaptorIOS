@@ -10,6 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 
+@class DIOPlayerView;
+@class DIOSoundControl;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -52,10 +54,9 @@ typedef NS_ENUM(NSInteger, DIOMediaPlayerEvent) {
 
 @interface DIOMediaPlayer : NSObject
 
-@property (nonatomic, strong) id<DIOMediaPlayerDelegate> delegate;
+@property (nonatomic, weak) id<DIOMediaPlayerDelegate> delegate;
 
-@property (nonatomic, strong) AVPlayer *player;
-@property (nonatomic, strong) id eventBeacons;
+@property (nonatomic, strong) AVPlayer *avPlayer;
 
 /*
  * https://developer.apple.com/documentation/avfoundation/media_assets_playback_and_editing/observing_the_playback_time?language=objc
@@ -68,7 +69,21 @@ typedef NS_ENUM(NSInteger, DIOMediaPlayerEvent) {
 
 @property (nonatomic) double durationInSeconds;
 @property (nonatomic) BOOL muted;
-@property (nonatomic) BOOL loopVideo;
+@property (nonatomic) BOOL loopMedia;
+@property (nonatomic) BOOL allowPlaybackWhenOutOfView;
+
+@property (nonatomic) BOOL started;
+@property (nonatomic) BOOL finished;
+@property (nonatomic) BOOL active;
+@property (nonatomic) BOOL alreadyPlayed;
+@property (nonatomic) BOOL hasLeft;
+@property (nonatomic) BOOL errorReported;
+
+@property (nonatomic, strong) UIView *view;
+@property (nonatomic, strong) DIOPlayerView *playerView;
+
+@property (nonatomic) BOOL showSoundControl;
+@property (nonatomic, strong, nullable) DIOSoundControl *soundCtrl;
 
 - (float)volumeLevel;
 - (double)duration;
@@ -79,6 +94,28 @@ typedef NS_ENUM(NSInteger, DIOMediaPlayerEvent) {
 - (void)impression;
 - (void)startWithURL:(NSURL*)url;
 - (UIView*)view;
+- (BOOL)isInView;
+
+- (BOOL)isPlayError;
+- (void)play;
+- (void)pause;
+- (void)leave;
+- (void)reenter;
+- (void)activate;
+- (void)deactivate;
+- (void)playerTaped;
+- (void)toggleSound:(BOOL)isEnabled;
+
+- (void)attachSoundControlToView:(UIView *)hostView;
+
+- (void)registerNotificationObservers;
+- (void)cleanupObservers;
+- (void)close;
+
+// Notification handlers (can be overridden by subclasses)
+- (void)itemDidFinishPlaying:(NSNotification*)notification;
+- (void)willResignActive:(NSNotification*)notification;
+- (void)didBecomeActive:(NSNotification*)notification;
 
 @end
 

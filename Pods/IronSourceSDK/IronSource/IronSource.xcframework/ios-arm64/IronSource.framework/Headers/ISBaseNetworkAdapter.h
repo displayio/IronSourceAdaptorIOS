@@ -10,15 +10,14 @@
 #import "ISAdapterConsentProtocol.h"
 #import "ISAdapterDebugProtocol.h"
 #import "ISAdapterMetaDataProtocol.h"
-#import "ISAdapterSettingsProtocol.h"
+#import "ISAdapterNetworkDataProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ISBaseNetworkAdapter : NSObject <ISAdapterBaseProtocol,
                                             ISAdapterDebugProtocol,
                                             ISAdapterConsentProtocol,
-                                            ISAdapterMetaDataProtocol,
-                                            ISAdapterSettingsProtocol>
+                                            ISAdapterNetworkDataProtocol>
 
 @end
 

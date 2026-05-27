@@ -8,17 +8,37 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ISLogDelegate.h"
+typedef enum LogLevelValues {
+  IS_LOG_NONE = -1,
+  IS_LOG_INTERNAL = 0,
+  IS_LOG_INFO = 1,
+  IS_LOG_WARNING = 2,
+  IS_LOG_ERROR = 3,
+  IS_LOG_GENERAL = 4,  // Publisher log level, always visible
+  IS_LOG_CRITICAL = 5,
 
-#define logInternal(tag2, format, ...)                                                      \
+} ISLogLevel;
+
+typedef enum LogTagValue {
+  TAG_API,
+  TAG_DELEGATE,
+  TAG_ADAPTER_API,
+  TAG_ADAPTER_DELEGATE,
+  TAG_NETWORK,
+  TAG_NATIVE,
+  TAG_INTERNAL,
+  TAG_EVENT
+} LogTag;
+
+#define ISLogInternal(tag2, format, ...)                                                    \
   [[ISLoggerManager sharedInstance] log:[NSString stringWithFormat:(format), ##__VA_ARGS__] \
                                   level:IS_LOG_INTERNAL                                     \
                                     tag:tag2]
-#define logInfo(tag2, format, ...)                                                          \
+#define ISLogInfo(tag2, format, ...)                                                        \
   [[ISLoggerManager sharedInstance] log:[NSString stringWithFormat:(format), ##__VA_ARGS__] \
                                   level:IS_LOG_INFO                                         \
                                     tag:tag2]
-#define logError(tag2, format, ...)                                                         \
+#define ISLogError(tag2, format, ...)                                                       \
   [[ISLoggerManager sharedInstance] log:[NSString stringWithFormat:(format), ##__VA_ARGS__] \
                                   level:IS_LOG_ERROR                                        \
                                     tag:tag2]
@@ -39,7 +59,6 @@
                  message:(NSString *)message
                    level:(ISLogLevel)logLevel
                      tag:(LogTag)logTag;
-- (void)addPublisherLogger:(id<ISLogDelegate>)delegate;
 - (void)dynamicLog:(char *)calledFrom
            message:(NSString *)message
              level:(ISLogLevel)logLevel

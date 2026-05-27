@@ -6,7 +6,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface InterstitialAdDelegate : NSObject<LevelPlayInterstitialDelegate>
+@interface InterstitialAdDelegate : NSObject<LPMInterstitialAdDelegate>
 
 @property (weak, nonatomic) id<ViewControllerAdDelegate> delegate;
 

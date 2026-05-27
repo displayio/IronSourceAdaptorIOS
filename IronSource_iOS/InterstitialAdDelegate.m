@@ -6,74 +6,64 @@
 
 - (instancetype)initWithDelegate:(id<ViewControllerAdDelegate>)delegate {
     self = [super init];
-    
+
     if (self) {
         _delegate = delegate;
     }
-    
+
     return self;
 }
 
 /**
- Called after an interstitial has been loaded
- @param adInfo The info of the ad.
+ Triggered when an interstitial ad is successfully loaded.
+ @param adInfo Ad info of the loaded interstitial ad.
  */
-- (void)didLoadWithAdInfo:(ISAdInfo *)adInfo {
+- (void)didLoadAdWithAdInfo:(LPMAdInfo *)adInfo {
     NSLog(@"adInfo = %@", adInfo);
     [self.delegate interstitialLoaded];
 }
 
 /**
- Called after an interstitial has attempted to load but failed.
- @param error The reason for the error
+ Triggered when an interstitial ad fails to load.
+ @param adUnitId The ad unit id of the interstitial ad that fails to load.
+ @param error The error that occurred during loading.
  */
-- (void)didFailToLoadWithError:(NSError *)error {
-    NSLog(@"error = %@", error.localizedDescription);
+- (void)didFailToLoadAdWithAdUnitId:(NSString *)adUnitId error:(NSError *)error {
+    NSLog(@"adUnitId = %@ | error = %@", adUnitId, error.localizedDescription);
     [self.delegate interstitialFailToLoad];
 }
 
 /**
- Called after an interstitial has been opened.
+ Triggered when an interstitial ad is displayed.
  This is the indication for impression.
- @param adInfo The info of the ad.
+ @param adInfo Ad info of the displayed interstitial ad.
  */
-- (void)didOpenWithAdInfo:(ISAdInfo *)adInfo {
+- (void)didDisplayAdWithAdInfo:(LPMAdInfo *)adInfo {
     NSLog(@"adInfo = %@", adInfo);
 }
 
 /**
- Called after an interstitial has been displayed on the screen.
- This callback is not supported by all networks, and we recommend using it
- only if it's supported by all networks you included in your build.
- @param adInfo The info of the ad.
+ Triggered when an interstitial ad fails to show.
+ @param adInfo Ad info of the interstitial ad that failed to display.
+ @param error The error that occurred.
  */
-- (void)didShowWithAdInfo:(ISAdInfo *)adInfo {
-    NSLog(@"adInfo = %@", adInfo);
-}
-
-/**
- Called after an interstitial has attempted to show but failed.
- @param error The reason for the error.
- @param adInfo The info of the ad.
- */
-- (void)didFailToShowWithError:(NSError *)error
-                     andAdInfo:(ISAdInfo *)adInfo {
+- (void)didFailToDisplayAdWithAdInfo:(LPMAdInfo *)adInfo error:(NSError *)error {
     NSLog(@"error = %@ | adInfo = %@", error.localizedDescription, adInfo);
 }
 
 /**
- Called after an interstitial has been clicked.
- @param adInfo The info of the ad.
+ Triggered when an interstitial ad is clicked.
+ @param adInfo Ad info of the clicked interstitial ad.
  */
-- (void)didClickWithAdInfo:(ISAdInfo *)adInfo {
+- (void)didClickAdWithAdInfo:(LPMAdInfo *)adInfo {
     NSLog(@"adInfo = %@", adInfo);
 }
 
 /**
- Called after an interstitial has been dismissed.
- @param adInfo The info of the ad.
+ Triggered when an interstitial ad is closed.
+ @param adInfo Ad info of the closed interstitial ad.
  */
-- (void)didCloseWithAdInfo:(ISAdInfo *)adInfo {
+- (void)didCloseAdWithAdInfo:(LPMAdInfo *)adInfo {
     NSLog(@"adInfo = %@", adInfo);
 }
 

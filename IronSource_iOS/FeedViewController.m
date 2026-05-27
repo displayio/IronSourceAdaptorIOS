@@ -7,12 +7,13 @@
 
 #import "FeedViewController.h"
 #import "BannerAdDelegate.h"
+#import "ViewController.h"
 #import <DIOSDK/DIOSDK.h>
 #import <IronSource/IronSource.h>
 
-@interface FeedViewController () <LevelPlayBannerDelegate>
+@interface FeedViewController () <LPMBannerAdViewDelegate>
 
-@property (nonatomic, strong) ISBannerView *adView;
+@property (nonatomic, strong) LPMBannerAdView *adView;
 
 @end
 
@@ -22,12 +23,12 @@ BOOL isClicked;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(close:)];
-    
+
     self.navigationController.navigationBar.translucent = NO;
-    
+
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell1"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell2"];
-    
+
     [self createInlineAd];
 }
 
@@ -36,8 +37,14 @@ BOOL isClicked;
 }
 
 - (void)createInlineAd {
-    [IronSource setLevelPlayBannerDelegate:self];
-    [IronSource loadBannerWithViewController:self size:ISBannerSize_RECTANGLE];
+    NSString *adUnitId = [self.adUnitType isEqual:@"IS"] ? kAdUnitIS : kAdUnitInfeed;
+    LPMBannerAdViewConfig *config = [[[LPMBannerAdViewConfigBuilder alloc] init]
+                                     setWithAdSize:[LPMAdSize mediumRectangleSize]].build;
+    LPMBannerAdView *banner = [[LPMBannerAdView alloc] initWithAdUnitId:adUnitId config:config];
+    banner.frame = CGRectMake(0, 0, 300, 250);
+    [banner setDelegate:self];
+    self.adView = banner;
+    [banner loadAdWithViewController:self];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -47,7 +54,7 @@ BOOL isClicked;
     }
     [[DIOController sharedInstance] finishAllAds];
     if (self.adView != nil) {
-        [IronSource destroyBanner:self.adView];
+        [self.adView destroy];
         self.adView = nil;
     }
 }
@@ -64,7 +71,7 @@ BOOL isClicked;
     if (indexPath.row == 25 && self.adView) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell1" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
+
         [cell.contentView addSubview:self.adView];
         self.adView.translatesAutoresizingMaskIntoConstraints = NO;
         if ([self.adUnitType isEqual:@"IF"]) {
@@ -76,17 +83,17 @@ BOOL isClicked;
                 [cell.contentView.leadingAnchor constraintEqualToAnchor:self.adView.leadingAnchor].active = YES;
                 [cell.contentView.trailingAnchor constraintEqualToAnchor:self.adView.trailingAnchor].active = YES;
             }
-        
+
         [cell.contentView.topAnchor constraintEqualToAnchor:self.adView.topAnchor].active = YES;
         [cell.contentView.bottomAnchor constraintEqualToAnchor:self.adView.bottomAnchor].active = YES;
-        
+
         return cell;
     }
-    
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell2" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = @"Simple Cell";
-    
+
     return cell;
 }
 
@@ -99,53 +106,55 @@ BOOL isClicked;
 
 - (void)close:(id)sender {
     if (self.adView != nil) {
-        [IronSource destroyBanner:self.adView];
+        [self.adView destroy];
         self.adView = nil;
     }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - LevelPlayBannerDelegate
+#pragma mark - LPMBannerAdViewDelegate
 /**
- Called after each banner ad has been successfully loaded, either a manual load or banner refresh
+ Called after a banner ad has been successfully loaded, either a manual load or banner refresh.
  @param adInfo The info of the ad.
  */
-- (void)didLoad:(ISBannerView *)bannerView withAdInfo:(ISAdInfo *)adInfo{
-    self.adView = bannerView;
+- (void)didLoadAdWithAdInfo:(LPMAdInfo *)adInfo{
     NSLog(@"Banner was loaded");
     NSLog(@"adInfo = %@", adInfo);
+    [self.tableView reloadData];
 }
 /**
  Called after a banner has attempted to load an ad but failed.
  This delegate will be sent both for manual load and refreshed banner failures.
- @param error The reason for the error
+ @param adUnitId The ad unit id of the banner that failed to load.
+ @param error The reason for the error.
  */
-- (void)didFailToLoadWithError:(NSError *)error{
+- (void)didFailToLoadAdWithAdUnitId:(NSString *)adUnitId error:(NSError *)error{
+    NSLog(@"adUnitId = %@ | error = %@", adUnitId, error.localizedDescription);
 }
 /**
  Called after a banner has been clicked.
  @param adInfo The info of the ad.
  */
-- (void)didClickWithAdInfo:(ISAdInfo *)adInfo{
+- (void)didClickAdWithAdInfo:(LPMAdInfo *)adInfo{
     isClicked = YES;
 }
 /**
  Called when a user was taken out of the application context.
  @param adInfo The info of the ad.
  */
-- (void)didLeaveApplicationWithAdInfo:(ISAdInfo *)adInfo{
+- (void)didLeaveAppWithAdInfo:(LPMAdInfo *)adInfo{
 }
 /**
  Called when a banner presented a full screen content.
  @param adInfo The info of the ad.
  */
-- (void)didPresentScreenWithAdInfo:(ISAdInfo *)adInfo{
+- (void)didExpandAdWithAdInfo:(LPMAdInfo *)adInfo{
 }
 /**
  Called after a full screen content has been dismissed.
  @param adInfo The info of the ad.
  */
-- (void)didDismissScreenWithAdInfo:(ISAdInfo *)adInfo{
+- (void)didCollapseAdWithAdInfo:(LPMAdInfo *)adInfo{
 }
 
 @end

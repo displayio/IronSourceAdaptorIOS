@@ -54,7 +54,7 @@ DIOAd *dioInterstitialAd;
         switch (event) {
             case DIOAdEventOnShown:{
                 [delegate adDidOpen];
-                [delegate adDidShowSucceed];
+                [delegate adDidBecomeVisible];
                 if ([dioInterstitialAd isKindOfClass:DIOInterstitialVast.class]) {
                     [delegate adDidStart];
                 }
@@ -80,7 +80,7 @@ DIOAd *dioInterstitialAd;
                 dioInterstitialAd = nil;
                 break;
             }
-                
+            case DIOAdEventOnAdStarted:
             case DIOAdEventOnSwipedOut:
             case DIOAdEventOnSnapped:
             case DIOAdEventOnMuted:

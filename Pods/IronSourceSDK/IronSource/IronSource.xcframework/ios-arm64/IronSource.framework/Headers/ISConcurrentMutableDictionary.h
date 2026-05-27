@@ -7,35 +7,27 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ISConcurrentMutableDictionary : NSObject
-
-+ (instancetype)dictionary;
-+ (instancetype)dictionaryWithDictionary:(id)dictionary;
-
-- (instancetype)initCommon;
-- (instancetype)init;
-- (instancetype)initWithCapacity:(NSUInteger)numItems;
-- (instancetype)initWithContentsOfFile:(NSString *)path;
-- (instancetype)initWithContentsOfURL:(NSURL *)url;
-- (instancetype)initWithCoder:(NSCoder *)aDecoder;
-- (instancetype)initWithDictionary:(NSMutableDictionary *)dictionary;
+@protocol LPMThreadSafeDictionaryProtocol <NSObject>
 
 - (NSUInteger)count;
-- (id)objectForKey:(id)key;
-- (NSEnumerator *)keyEnumerator;
 
-- (void)setObject:(id)object forKey:(id<NSCopying>)key;
-- (void)setDictionary:(NSDictionary *)otherDictionary;
-- (void)addEntriesFromDictionary:(NSDictionary *)otherDictionary;
+- (id)objectForKey:(NSString *)key;
+- (void)setObject:(id)object forKey:(NSString *)key;
+- (BOOL)hasObjectForKey:(NSString *)key;
 
-- (void)removeObjectForKey:(id)key;
-- (void)removeObjectsForKeys:(NSArray *)keyArray;
+- (void)removeObjectForKey:(NSString *)key;
 - (void)removeAllObjects;
 
-- (NSArray *)allKeys;
+- (NSArray<NSString *> *)allKeys;
 - (NSArray *)allValues;
-- (NSDictionary *)allData;
+- (NSDictionary<NSString *, id> *)allData;
 
-- (BOOL)hasObjectForKey:(id)key;
+@end
+
+@interface ISConcurrentMutableDictionary : NSObject <LPMThreadSafeDictionaryProtocol>
+
++ (instancetype)dictionary __attribute__((deprecated("deprecated, use lpmDictionary instead.")));
+
++ (id<LPMThreadSafeDictionaryProtocol>)lpmDictionary;
 
 @end

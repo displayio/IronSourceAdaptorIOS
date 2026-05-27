@@ -18,21 +18,17 @@ NS_ASSUME_NONNULL_BEGIN
 // Mandatory callbacks
 
 - (void)adDidClose;
-
-/// @param errorCode the error code if available, general ones in AdapterErrors
-/// @param errorMessage the error message if available
-- (void)adDidFailToShowWithErrorCode:(NSInteger)errorCode
-                        errorMessage:(nullable NSString*)errorMessage;
+- (void)adDidCloseWithExtraData:(NSDictionary<NSString *, id> *)extraData;
 
 // Optional callbacks
-
-- (void)adDidShowSucceed;
-
 - (void)adDidBecomeVisible;
+- (void)adDidBecomeVisibleWithExtraData:(NSDictionary<NSString *, id> *)extraData;
 
 - (void)adDidStart;
+- (void)adDidStartWithExtraData:(NSDictionary<NSString *, id> *)extraData;
 
 - (void)adDidEnd;
+- (void)adDidEndWithExtraData:(NSDictionary<NSString *, id> *)extraData;
 
 @end
 

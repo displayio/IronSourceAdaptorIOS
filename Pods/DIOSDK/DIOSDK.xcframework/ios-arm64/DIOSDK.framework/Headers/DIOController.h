@@ -29,7 +29,8 @@ typedef NS_ENUM(NSInteger, DIOErrorCode) {
     kDIOErrorAdUnavailable = 8,
     kDIOErrorParsing = 9,
     kDIOErrorLoadingMedia = 10,
-    kDIOErrorUnsupportedPlatform = 11
+    kDIOErrorUnsupportedPlatform = 11,
+    kDIOErrorLoadingMediationAdProvider = 12
 };
 
 typedef NS_ENUM(NSInteger, DIOOMType) {
@@ -49,6 +50,7 @@ extern NSString* const ERROR_LEVEL_TRACKING_ERROR;
 @property (nonatomic, strong) NSMutableDictionary *placements;
 @property (nonatomic, strong) NSString *mraidJsScript;
 @property (nonatomic, strong) NSString *userSession;
+@property (nonatomic, copy, nullable) NSString *userId;
 @property (nonatomic, strong) DIODeviceData *deviceData;
 @property (nonatomic, strong) CLLocation *lastKnownLocation;
 @property (nonatomic, strong) CLPlacemark *lastKnownPlacemark;
@@ -69,6 +71,16 @@ extern NSString* const ERROR_LEVEL_TRACKING_ERROR;
  @param errorHandler A block object to be executed when something is going wrong. This block takes one argument: the error.
  */
 - (void)initializeWithAppId:(NSString*)appId completionHandler:(void (^)(void))completionHandler errorHandler:(void (^)(NSError*))errorHandler;
+
+/**
+ Initializes the DIOController with an optional userId that will be forwarded
+ to /serving/init as user.id and used as the default user.id on every ad request
+ (publishers can override per-request via DIOAdRequest setUserId:).
+ */
+- (void)initializeWithAppId:(NSString*)appId
+                     userId:(nullable NSString*)userId
+          completionHandler:(void (^)(void))completionHandler
+               errorHandler:(void (^)(NSError*))errorHandler;
 
 /**
  @param placementId The placement id as defined in the Display.io control panel.
@@ -92,7 +104,7 @@ Stops all ads and releases the resources associated with each of them
  @deprecated This method is deprecated. SDK does not request user permission for collecting geo data.
  @param enabled Whether to enable or disable location-based targeting.
  */
-- (void)setLocationBasedTargeting:(BOOL)enabled DEPRECATED_MSG_ATTRIBUTE("This method is deprecated. Use `setTargetingOptions:` instead to configure targeting options.");
+- (void)setLocationBasedTargeting:(BOOL)enabled DEPRECATED_MSG_ATTRIBUTE("This method is deprecated.");
 
 /**
  Allowsto change OM SDK session type or  turn off OM SDK (enabled by default with type Native.)
@@ -109,7 +121,7 @@ Stops all ads and releases the resources associated with each of them
 - (DIOMockAdapter*)mockAdapter;
 
 - (void)logWithMessage:(NSString*)message;
-- (void)logWithError:(NSString*)error trace:(NSArray<NSString*>*)trace data:(id)data level:(NSString*)level;
+- (void)logWithError:(NSString*)error trace:(NSArray<NSString*>*)trace level:(NSString*)level;
 
 - (void)uninitialize;
 - (void)setCourseWithURLString:(NSString*)urlString;
@@ -118,6 +130,7 @@ Stops all ads and releases the resources associated with each of them
 - (void)crash;
 - (NSString*)getSDKVersion;
 - (NSString*)getSDKName;
+- (NSString*)getToken;
 
 @end
 

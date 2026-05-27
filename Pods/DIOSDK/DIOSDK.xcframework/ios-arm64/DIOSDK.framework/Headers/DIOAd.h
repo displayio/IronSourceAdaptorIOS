@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DIOAdUnitType.h"
+#import <DIOSDK/DIOAdUnitType.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,17 +26,10 @@ typedef NS_ENUM(NSInteger, DIOAdEvent) {
 
 @class DIOAd;
 
-@protocol DIOAdClickDelegate <NSObject>
-
-- (void)onAdClicked:(DIOAd*)ad;
-
-@end
-
 @interface DIOAd : NSObject
 
 @property (nonatomic, strong) NSString *placementId;
 @property (nonatomic, strong) NSString *requestId;
-@property (nonatomic, strong) NSString *format;
 @property (nonatomic, strong) id data;
 @property (nonatomic) BOOL loaded;
 @property (nonatomic) BOOL impressed;
@@ -48,8 +41,6 @@ typedef NS_ENUM(NSInteger, DIOAdEvent) {
 @property (nonatomic, strong) NSString *lurl;
 @property (nonatomic, strong)  NSArray<NSString*> *adomain;
 @property (nonatomic, strong) NSString *auctionId;
-
-@property (nonatomic, weak) id<DIOAdClickDelegate> clickDelegate;
 
 @property (nonatomic, strong) void (^adEventHandler)(DIOAdEvent);
 
@@ -70,13 +61,15 @@ Use to track events for InFeed, Banner, Medium Rectangle, Interscroller and OutS
 
 /**
  Leaves ad's current screen (for in-feed video ads only)
+ @deprecated SDK now auto-pauses when the ad's container view leaves its window.
  */
-- (void)leave;
+- (void)leave __attribute__((deprecated("SDK auto-pauses on container view leaving window")));
 
 /**
  Re-enters ad's current screen (for in-feed video ads only)
+ @deprecated SDK now auto-resumes when the ad's container view returns to its window.
  */
-- (void)reenter;
+- (void)reenter __attribute__((deprecated("SDK auto-resumes on container view returning to window")));
 
 /**
  Stops an ad and releases the resources associated with it
@@ -98,7 +91,7 @@ Use to track events for InFeed, Banner, Medium Rectangle, Interscroller and OutS
 - (NSString*) advertiserName;
 - (NSString*) advertiserClickURL;
 - (void)updateCTAButtonText:(NSString*) text;
-- (BOOL)reportUserClick;
+- (BOOL)reportUserClick __attribute__((deprecated("This method is deprecated")));
 - (long)adTimeToLive;
 @end
 
