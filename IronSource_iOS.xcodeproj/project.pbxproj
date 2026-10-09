@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B731D97DE5293F66AD40603 /* ISDIOCustomRewardedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBD27A1BE9E5155A5AFA42 /* ISDIOCustomRewardedVideo.m */; };
 		DBBF60B72BAC626A00962F6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60B62BAC626A00962F6D /* AppDelegate.m */; };
 		DBBF60BA2BAC626A00962F6D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60B92BAC626A00962F6D /* SceneDelegate.m */; };
 		DBBF60BD2BAC626A00962F6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF60BC2BAC626A00962F6D /* ViewController.m */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34A563C9B6793BB852EF1848 /* ISDIOCustomRewardedVideo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ISDIOCustomRewardedVideo.h; sourceTree = "<group>"; };
+		47CBD27A1BE9E5155A5AFA42 /* ISDIOCustomRewardedVideo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ISDIOCustomRewardedVideo.m; sourceTree = "<group>"; };
 		93FC3FD529FF69BEB44C083E /* Pods-IronSource_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronSource_iOS.release.xcconfig"; path = "Target Support Files/Pods-IronSource_iOS/Pods-IronSource_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		AAB0A4D980420ACA33C2E42D /* Pods_IronSource_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IronSource_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99E71EE09D94692C1C713BF /* Pods-IronSource_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronSource_iOS.debug.xcconfig"; path = "Target Support Files/Pods-IronSource_iOS/Pods-IronSource_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				DBBF60D92BAD7BA500962F6D /* ISDIOCustomInterstitial.m */,
 				DBBF60DB2BAD7BBD00962F6D /* ISDIOCustomBanner.h */,
 				DBBF60DC2BAD7BBD00962F6D /* ISDIOCustomBanner.m */,
+				34A563C9B6793BB852EF1848 /* ISDIOCustomRewardedVideo.h */,
+				47CBD27A1BE9E5155A5AFA42 /* ISDIOCustomRewardedVideo.m */,
 			);
 			path = DDIOAdapterIronSource;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				DBBF60C82BAC626C00962F6D /* main.m in Sources */,
 				DBBF60BA2BAC626A00962F6D /* SceneDelegate.m in Sources */,
 				DBBF60D72BAD7B8000962F6D /* ISDIOCustomAdapter.m in Sources */,
+				6B731D97DE5293F66AD40603 /* ISDIOCustomRewardedVideo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

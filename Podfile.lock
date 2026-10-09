@@ -1,18 +1,22 @@
 PODS:
-  - DIOSDK (4.7.1):
+  - DIOSDK (4.8.1):
+    - DIOSDK/Full (= 4.8.1)
+  - DIOSDK/Core (4.8.1)
+  - DIOSDK/Full (4.8.1):
+    - DIOSDK/Core
     - FBAudienceNetwork
-  - FBAudienceNetwork (6.21.1)
-  - IronSourceAdQualitySDK (9.5.1)
-  - IronSourceSDK (9.4.1.0):
-    - IronSourceSDK/AdQuality (= 9.4.1.0)
-    - IronSourceSDK/Ads (= 9.4.1.0)
-  - IronSourceSDK/AdQuality (9.4.1.0):
-    - IronSourceAdQualitySDK (~> 9.5.0)
-  - IronSourceSDK/Ads (9.4.1.0)
+  - FBAudienceNetwork (6.22.0)
+  - IronSourceAdQualitySDK (9.10.0)
+  - IronSourceSDK (9.6.1.0):
+    - IronSourceSDK/AdQuality (= 9.6.1.0)
+    - IronSourceSDK/Ads (= 9.6.1.0)
+  - IronSourceSDK/AdQuality (9.6.1.0):
+    - IronSourceAdQualitySDK (~> 9)
+  - IronSourceSDK/Ads (9.6.1.0)
 
 DEPENDENCIES:
-  - DIOSDK (= 4.7.1)
-  - IronSourceSDK (= 9.4.1.0)
+  - DIOSDK (= 4.8.1)
+  - IronSourceSDK (= 9.6.1.0)
 
 SPEC REPOS:
   trunk:
@@ -22,11 +26,11 @@ SPEC REPOS:
     - IronSourceSDK
 
 SPEC CHECKSUMS:
-  DIOSDK: 8059534eebed98d4bd3725a6255472d3535a85f1
-  FBAudienceNetwork: 85d18a65c9e35bc426bd4664cf3ae2a1172d7b60
-  IronSourceAdQualitySDK: d3f89c7eb4afc6b6c45fc3d83d64789a9977148f
-  IronSourceSDK: d12f8939bf36dd4e28bb4f6134bcde9a53af15db
+  DIOSDK: 3e299853fbcce48db1666c7e7911d29ddc2a2ee6
+  FBAudienceNetwork: b05c65487114aa3bf3a68e865c60937a9fb03b69
+  IronSourceAdQualitySDK: 779fc3754f27b3d5fae8da52c5709a2dbdb502a6
+  IronSourceSDK: 89e641e95136aa2a3868a0e3659564a6392fe607
 
-PODFILE CHECKSUM: e485d9b454c36372f8d3b715b327853e384e5fef
+PODFILE CHECKSUM: 66769b3412f56648bc7028f5fb03555b0842bd14
 
 COCOAPODS: 1.16.2

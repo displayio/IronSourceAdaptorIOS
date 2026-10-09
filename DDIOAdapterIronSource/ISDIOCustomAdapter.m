@@ -8,6 +8,8 @@
 #import "ISDIOCustomAdapter.h"
 #import <DIOSDK/DIOSDK.h>
 
+static NSString *const kDIOAdapterVersion = @"4.8.1";
+
 @implementation ISDIOCustomAdapter
 
 - (void)init:(ISAdData*)adData delegate:(id<ISNetworkInitializationDelegate>)delegate {
@@ -35,7 +37,7 @@
 }
 
 - (NSString*)adapterVersion {
-    return [[DIOController sharedInstance] getSDKVersion];
+    return kDIOAdapterVersion;
 }
 
 @end

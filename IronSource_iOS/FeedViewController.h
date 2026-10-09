@@ -6,11 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <IronSource/IronSource.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FeedViewController : UITableViewController
 @property (nonatomic, strong) NSString *adUnitType;
+@property (nonatomic, strong, nullable) LPMBannerAdView *preloadedAdView;
 
 @end
 

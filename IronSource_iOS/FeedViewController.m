@@ -17,6 +17,8 @@
 
 @end
 
+static const NSInteger kAdRow = 5;
+
 @implementation FeedViewController
 BOOL isClicked;
 
@@ -36,12 +38,24 @@ BOOL isClicked;
     [super viewDidAppear:animated];
 }
 
+- (BOOL)isBanner {
+    return [self.adUnitType isEqual:@"BN"];
+}
+
 - (void)createInlineAd {
-    NSString *adUnitId = [self.adUnitType isEqual:@"IS"] ? kAdUnitIS : kAdUnitInfeed;
-    LPMBannerAdViewConfig *config = [[[LPMBannerAdViewConfigBuilder alloc] init]
-                                     setWithAdSize:[LPMAdSize mediumRectangleSize]].build;
+    if (self.preloadedAdView != nil) {
+        self.adView = self.preloadedAdView;
+        self.preloadedAdView = nil;
+        [self.adView removeFromSuperview];
+        [self.adView setDelegate:self];
+        [self.tableView reloadData];
+        return;
+    }
+    NSString *adUnitId = [self.adUnitType isEqual:@"IS"] ? kAdUnitIS : ([self isBanner] ? kAdUnitBanner : kAdUnitInfeed);
+    LPMAdSize *size = [self isBanner] ? [LPMAdSize bannerSize] : [LPMAdSize mediumRectangleSize];
+    LPMBannerAdViewConfig *config = [[[LPMBannerAdViewConfigBuilder alloc] init] setWithAdSize:size].build;
     LPMBannerAdView *banner = [[LPMBannerAdView alloc] initWithAdUnitId:adUnitId config:config];
-    banner.frame = CGRectMake(0, 0, 300, 250);
+    banner.frame = [self isBanner] ? CGRectMake(0, 0, 320, 50) : CGRectMake(0, 0, 300, 250);
     [banner setDelegate:self];
     self.adView = banner;
     [banner loadAdWithViewController:self];
@@ -68,13 +82,18 @@ BOOL isClicked;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 25 && self.adView) {
+    if (indexPath.row == kAdRow && self.adView) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell1" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
         [cell.contentView addSubview:self.adView];
         self.adView.translatesAutoresizingMaskIntoConstraints = NO;
-        if ([self.adUnitType isEqual:@"IF"]) {
+        if ([self isBanner]) {
+            self.adView.frame = CGRectMake(0, 0, 320, 50);
+            [cell.contentView.centerXAnchor constraintEqualToAnchor:self.adView.centerXAnchor].active = YES;
+            [self.adView.widthAnchor constraintEqualToConstant:320].active = YES;
+            [self.adView.heightAnchor constraintEqualToConstant:50].active = YES;
+        } else if ([self.adUnitType isEqual:@"IF"]) {
             self.adView.frame = CGRectMake(0, 0, 300, 250);
             [cell.contentView.centerXAnchor constraintEqualToAnchor:self.adView.centerXAnchor].active = YES;
             [self.adView.widthAnchor constraintEqualToConstant:300].active = YES;
@@ -98,8 +117,11 @@ BOOL isClicked;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 25 && [self.adUnitType isEqual:@"IF"]) {
+    if (indexPath.row == kAdRow && [self.adUnitType isEqual:@"IF"]) {
         return 250;
+    }
+    if (indexPath.row == kAdRow && [self isBanner]) {
+        return 50;
     }
     return UITableViewAutomaticDimension;
 }

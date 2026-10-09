@@ -8,15 +8,20 @@
 #import "ISDIOCustomBanner.h"
 #import <DIOSDK/DIOSDK.h>
 
-@implementation ISDIOCustomBanner
+@interface ISDIOCustomBanner ()
 
-DIOAd *dioInlineAd;
+@property (nonatomic, strong, nullable) DIOAd *inlineAd;
+@property (nonatomic) BOOL destroyed;
+
+@end
+
+@implementation ISDIOCustomBanner
 
 - (void)loadAdWithAdData:(nonnull ISAdData *)adData
           viewController:(UIViewController *)viewController
                     size:(ISBannerSize *)size
                 delegate:(nonnull id<ISBannerAdDelegate>)delegate{
-    
+
     NSString *placementId = [adData getString:@"dio_placement_id"];
     if (placementId == nil || [placementId length] == 0) {
         [delegate adDidFailToLoadWithErrorType:ISAdapterErrorTypeInternal
@@ -32,11 +37,26 @@ DIOAd *dioInlineAd;
                                   errorMessage:@"No placement or placement is not an Inline type"];
         return;
     }
+    BOOL isRectangleSize = size.height >= 250;
+    BOOL isBannerPlacement = [placement isKindOfClass:[DIOBannerPlacement class]];
+    BOOL isRectanglePlacement = [placement isKindOfClass:[DIOInFeedPlacement class]]
+        || [placement isKindOfClass:[DIOMediumRectanglePlacement class]];
+    if ((isBannerPlacement && isRectangleSize) || (isRectanglePlacement && !isRectangleSize)) {
+        [delegate adDidFailToLoadWithErrorType:ISAdapterErrorTypeInternal
+                                     errorCode:ISAdapterErrorInternal
+                                  errorMessage:[NSString stringWithFormat:@"Placement %@ does not match banner size %@", placementId, size.sizeDescription]];
+        return;
+    }
+    self.destroyed = NO;
     dispatch_async(dispatch_get_main_queue(), ^{
         DIOAdRequest *adRequest = [placement newAdRequest];
-        
+
         [adRequest requestAdWithAdReceivedHandler:^(DIOAd *ad) {
-            dioInlineAd = ad;
+            if (self.destroyed) {
+                [ad finish];
+                return;
+            }
+            self.inlineAd = ad;
             [self handleInlineAdEvents:ad andNotifyDelegate:delegate];
             UIView *adView = [ad view];
             NSString *adUnitType = ad.adUnitType;
@@ -56,17 +76,24 @@ DIOAd *dioInlineAd;
             }
             [delegate adDidLoadWithView: adView];
         } noAdHandler:^(NSError *error){
+            if (self.destroyed) {
+                return;
+            }
             [delegate adDidFailToLoadWithErrorType:ISAdapterErrorTypeNoFill errorCode:ISAdapterErrorInternal errorMessage:@"No fill"];
         }];
-        
+
     });
 }
 
 - (void)destroyAdWithAdData:(nonnull ISAdData *)adData {
-    if (dioInlineAd != nil) {
-        [dioInlineAd finish];
-        dioInlineAd = nil;
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.destroyed = YES;
+        DIOAd *ad = self.inlineAd;
+        self.inlineAd = nil;
+        if (ad != nil) {
+            [ad finish];
+        }
+    });
 }
 
 
@@ -74,25 +101,29 @@ DIOAd *dioInlineAd;
     if(ad == nil || delegate == nil) {
         return;
     }
-    
+
+    __weak ISDIOCustomBanner *weakSelf = self;
     [ad setEventHandler:^(DIOAdEvent event) {
+        ISDIOCustomBanner *strongSelf = weakSelf;
+        if (strongSelf == nil || strongSelf.destroyed) {
+            return;
+        }
         switch (event) {
             case DIOAdEventOnShown:{
-                [delegate adDidOpen];
-                break;
-            }
-            case DIOAdEventOnFailedToShow:{
-                [delegate adDidDismissScreen];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    ISDIOCustomBanner *openSelf = weakSelf;
+                    if (openSelf != nil && !openSelf.destroyed) {
+                        [delegate adDidOpen];
+                    }
+                });
                 break;
             }
             case DIOAdEventOnClicked:{
                 [delegate adDidClick];
                 break;
             }
-            case DIOAdEventOnClosed:{
-                [delegate adDidDismissScreen];
-                break;
-            }
+            case DIOAdEventOnFailedToShow:
+            case DIOAdEventOnClosed:
             case DIOAdEventOnAdStarted:
             case DIOAdEventOnAdCompleted:
             case DIOAdEventOnSwipedOut:

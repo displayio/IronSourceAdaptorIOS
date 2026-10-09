@@ -9,9 +9,13 @@
 #import <DIOSDK/DIOSDK.h>
 
 
-@implementation ISDIOCustomInterstitial
+@interface ISDIOCustomInterstitial ()
 
-DIOAd *dioInterstitialAd;
+@property (nonatomic, strong, nullable) DIOAd *interstitialAd;
+
+@end
+
+@implementation ISDIOCustomInterstitial
 
 - (void)loadAdWithAdData:(nonnull ISAdData *)adData delegate:(nonnull id<ISInterstitialAdDelegate>)delegate {
     NSString *placementId = [adData getString:@"dio_placement_id"];
@@ -28,12 +32,12 @@ DIOAd *dioInterstitialAd;
                                   errorMessage:@"No placement or placement is not an Interstitial type"];
         return;
     }
-    
+
     dispatch_async(dispatch_get_main_queue(), ^{
         DIOAdRequest *adRequest = [placement newAdRequest];
-        
+
         [adRequest requestAdWithAdReceivedHandler:^(DIOAd *ad) {
-            dioInterstitialAd = ad;
+            self.interstitialAd = ad;
             [delegate adDidLoad];
         } noAdHandler:^(NSError *error){
             [delegate adDidFailToLoadWithErrorType:ISAdapterErrorTypeNoFill
@@ -46,57 +50,60 @@ DIOAd *dioInterstitialAd;
 - (void)showAdWithViewController:(nonnull UIViewController *)viewController
                           adData:(nonnull ISAdData *)adData
                         delegate:(nonnull id<ISInterstitialAdDelegate>)delegate {
-    // LevelPlay (IronSource 9.x) invokes show on a background thread, but presenting the DIO
-    // interstitial view controller must happen on the main thread. Dispatch to main to avoid
-    // "Modifying properties of a view's layer off the main thread" assertions.
     dispatch_async(dispatch_get_main_queue(), ^{
-    if (dioInterstitialAd == nil || dioInterstitialAd.impressed) {
-        [delegate adDidFailToShowWithErrorCode:ISAdapterErrorInternal errorMessage:@"Failed to show Ad"];
-        return;
-    }
-    [dioInterstitialAd showAdFromViewController:viewController eventHandler:^(DIOAdEvent event) {
-        switch (event) {
-            case DIOAdEventOnShown:{
-                [delegate adDidOpen];
-                [delegate adDidBecomeVisible];
-                if ([dioInterstitialAd isKindOfClass:DIOInterstitialVast.class]) {
-                    [delegate adDidStart];
-                }
-                break;
-            }
-            case DIOAdEventOnFailedToShow:{
-                if (dioInterstitialAd.impressed) {
-                    [delegate adDidFailToShowWithErrorCode:ISAdapterErrorInternal errorMessage:@"Failed to show ad"];
-                }
-                dioInterstitialAd = nil;
-                break;
-            }
-            case DIOAdEventOnClicked:{
-                [delegate adDidClick];
-                break;
-            }
-            case DIOAdEventOnClosed:
-            case DIOAdEventOnAdCompleted:{
-                [delegate adDidClose];
-                if ([dioInterstitialAd isKindOfClass:DIOInterstitialVast.class]) {
-                    [delegate adDidEnd];
-                }
-                dioInterstitialAd = nil;
-                break;
-            }
-            case DIOAdEventOnAdStarted:
-            case DIOAdEventOnSwipedOut:
-            case DIOAdEventOnSnapped:
-            case DIOAdEventOnMuted:
-            case DIOAdEventOnUnmuted:
-                break;
+        DIOAd *ad = self.interstitialAd;
+        if (ad == nil || ad.impressed) {
+            [delegate adDidFailToShowWithErrorCode:ISAdapterErrorInternal errorMessage:@"Failed to show Ad"];
+            return;
         }
-    }];
+        BOOL isVideo = [ad isKindOfClass:DIOInterstitialVast.class];
+        __block BOOL ended = NO;
+        [ad showAdFromViewController:viewController eventHandler:^(DIOAdEvent event) {
+            switch (event) {
+                case DIOAdEventOnShown:{
+                    [delegate adDidOpen];
+                    [delegate adDidBecomeVisible];
+                    if (isVideo) {
+                        [delegate adDidStart];
+                    }
+                    break;
+                }
+                case DIOAdEventOnFailedToShow:{
+                    if (!ad.impressed) {
+                        [delegate adDidFailToShowWithErrorCode:ISAdapterErrorInternal errorMessage:@"Failed to show ad"];
+                    }
+                    self.interstitialAd = nil;
+                    break;
+                }
+                case DIOAdEventOnClicked:{
+                    [delegate adDidClick];
+                    break;
+                }
+                case DIOAdEventOnAdCompleted:{
+                    if (isVideo && !ended) {
+                        ended = YES;
+                        [delegate adDidEnd];
+                    }
+                    break;
+                }
+                case DIOAdEventOnClosed:{
+                    [delegate adDidClose];
+                    self.interstitialAd = nil;
+                    break;
+                }
+                case DIOAdEventOnAdStarted:
+                case DIOAdEventOnSwipedOut:
+                case DIOAdEventOnSnapped:
+                case DIOAdEventOnMuted:
+                case DIOAdEventOnUnmuted:
+                    break;
+            }
+        }];
     });
 }
 
 - (BOOL)isAdAvailableWithAdData:(nonnull ISAdData *)adData {
-    return dioInterstitialAd != nil && !dioInterstitialAd.impressed;
+    return self.interstitialAd != nil && !self.interstitialAd.impressed;
 }
 
 @end
