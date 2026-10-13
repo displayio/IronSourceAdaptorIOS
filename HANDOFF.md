@@ -1,7 +1,7 @@
 # Handoff — Display.io LevelPlay adapter, iOS 4.8.1
 
-Status as of 2026-10-13. This repo and `~/Desktop/iOSWork/iOSMediationAdapters` are **committed,
-not released**. Android
+Status as of 2026-10-13. **Released 4.8.1**: CocoaPods trunk and SPM (tag `4.8.1` in
+`~/Desktop/iOSWork/iOSMediationAdapters`); this repo is tagged `4.8.1` too. Android
 counterpart: `~/Desktop/AndroidWork/IronSourceAndroid/HANDOFF.md`.
 
 ## Context
@@ -80,10 +80,9 @@ Use the test app with app key `2899db815` on a physical device. For each format 
 Known LevelPlay limitation: custom adapters are not listed in the Integration Test Suite, so
 "adapter version visible in the test suite" cannot be met.
 
-### 2. Release (when instructed)
-- `iOSMediationAdapters` is prepared for 4.8.1 together with all other adapters (podspecs, SPM
-  `DIOSDK` from 4.8.1, iOS 15.0; lint and SPM build pass). Remaining: tag `4.8.1`,
-  `pod trunk push IronSource-DIO-Adapter.podspec`; SPM picks the release up from the tag.
+### 2. Release — done
+- **Released 2026-10-13** together with all iOS adapters: `IronSource-DIO-Adapter` 4.8.1 on
+  CocoaPods trunk and SPM (tag `4.8.1` in `iOSMediationAdapters`).
 
 ### 3. Publisher documentation (`~/Desktop/Docs/wp-documentation`)
 Section `docs/ios-adapters.html#ironsource` is outdated:
